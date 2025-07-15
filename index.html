@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>محمد الباقر | Mohammed Al-Baqer</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
@@ -318,6 +315,7 @@
 <body>
     <nav>
         <div class="title"><i class="fas fa-code"></i> محمد الباقر</div>
+
         <div class="controls">
             <button onclick="toggleLang()" title="تبديل اللغة"><i class="fas fa-language"></i></button>
             <button onclick="toggleMode()" title="تبديل الوضع"><i class="fas fa-moon"></i></button>
@@ -328,7 +326,12 @@
     </nav>
 
     <header data-aos="fade-down">
-        <h1>محمد الباقر</h1>
+        <div class="lang-toggle" style="display: none;">
+            <span class="lang" data-ar="العربية" data-en="English">العربية</span> | <span class="lang" data-ar="الإنجليزية" data-en="English">الإنجليزية</span>
+        </div>
+        <h1 class="lang" data-ar="محمد الباقر" data-en="Mohammed Al-Baqer">محمد الباقر</h1>
+        <br>
+        <img src="image.png" alt="Profile Picture" style="width: 220px; height: 220px; object-fit: cover; border-radius: 50%; margin: 0 auto 18px; display: block; box-shadow: 0 2px 12px rgba(0,0,0,0.13); image-rendering: auto;">
         <div class="subtitle lang" data-ar="مبرمج ومطور برمجيات | مهتم للّينكس والويندوز | تقنيات الأمن السيبراني" data-en="Programmer & Software Developer | Linux & Windows Enthusiast | Cyber Security">مبرمج ومطور برمجيات | مهتم للّينكس والويندوز | تقنيات الأمن السيبراني</div>
         <div class="bio lang" data-ar="أنا محمد الباقر، مطور برمجيات عراقي شغوف بالتقنية والبرمجة منذ الصغر. أمتلك خبرة واسعة في تطوير البرمجيات والأدوات البرمجية على أنظمة لينكس وويندوز، وأهتم بمجالات الأمن السيبراني وأحب استكشاف كل جديد في عالم البرمجة. أؤمن بأن البرمجة ليست مجرد مهنة، بل هي شغف وإبداع مستمر. أطمح دائمًا لتطوير نفسي ومشاركة المعرفة مع الآخرين، وأسعى لبناء حلول تقنية تساهم في تسهيل حياة الناس." data-en="I'm Mohammed Al-Baqer, an Iraqi software developer passionate about technology and programming since childhood. I have extensive experience in scripting and building tools for Linux and Windows, with a keen interest in cybersecurity. I believe programming is not just a job, but a continuous passion and creativity. I always strive to improve myself, share knowledge, and build tech solutions that make people's lives easier.">أنا محمد الباقر، مطور برمجيات عراقي شغوف بالتقنية والبرمجة منذ الصغر. أمتلك خبرة واسعة في تطوير البرمجيات والأدوات البرمجية على أنظمة لينكس وويندوز، وأهتم بمجالات الأمن السيبراني وأحب استكشاف كل جديد في عالم البرمجة. أؤمن بأن البرمجة ليست مجرد مهنة، بل هي شغف وإبداع مستمر. أطمح دائمًا لتطوير نفسي ومشاركة المعرفة مع الآخرين، وأسعى لبناء حلول تقنية تساهم في تسهيل حياة الناس.</div>
         <div class="location"><i class="fas fa-map-marker-alt"></i> <span class="lang" data-ar="العراق" data-en="Iraq">العراق</span></div>
@@ -537,7 +540,6 @@
         </div>
     </div>
 
-    <!--للتواصل و الدعم عبر master card-->
     <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="الدعم والتواصل" data-en="Support & Contact">الدعم والتواصل</h2>
         <div class="skills-list">
@@ -557,7 +559,6 @@
         </div>
     </div>
 
-    <!--كيف تعلمن و طورت نفسي في البرمجة؟-->
     <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="كيف تعلمت البرمجة؟" data-en="How I Learned Programming?">كيف تعلمت البرمجة؟</h2>
         <div class="about-me lang" data-ar="- بدأت بتعلم البرمجة في سن مبكرة من خلال قراءة الكتب التقنية ومشاهدة الدروس على الإنترنت.
@@ -584,7 +585,6 @@
         </div>
     </div>
 
-    <!-- هل تعلمت من الأخطاء؟ -->
     <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="هل تعلمت من الأخطاء؟" data-en="Did I Learn from Mistakes?">هل تعلمت من الأخطاء؟</h2>
         <div class="about-me lang" data-ar="- نعم، الأخطاء كانت جزءًا مهمًا من رحلتي في تعلم البرمجة.
@@ -624,10 +624,8 @@
         &copy; <span class="lang" data-ar="(c) 2025 جميع الحقوق محفوظة" data-en=" Copyright (c) 2025">جميع الحقوق محفوظة (c) 2025</span>
     </footer>
 
-    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
         AOS.init();
 
         function toggleLang() {
