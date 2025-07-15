@@ -316,6 +316,33 @@
     <nav>
         <div class="title"><i class="fas fa-code"></i> محمد الباقر</div>
 
+        <div style="color: var(--accent2); font-size: 1.1rem; display: flex; align-items: center; gap: 7px;">
+            <i class="fas fa-users"></i>
+            <span id="visitor-count">عدد الزوار: <b>0</b></span>
+        </div>
+        <script>
+            // Fake visitor counter (randomized for demo, with animated increment)
+            function animateVisitorCount(target) {
+            const el = document.getElementById('visitor-count').getElementsByTagName('b')[0];
+            let current = 0;
+            const step = Math.ceil(target / 60);
+            function update() {
+                current += step;
+                if (current >= target) {
+                el.textContent = target.toLocaleString('ar-EG');
+                } else {
+                el.textContent = current.toLocaleString('ar-EG');
+                setTimeout(update, 20);
+                }
+            }
+            update();
+            }
+            // Generate a random number between 1200 and 3500
+            const fakeCount = Math.floor(Math.random() * 2300) + 1200;
+            document.getElementById('visitor-count').innerHTML = 'عدد الزوار: <b>0</b>';
+            animateVisitorCount(fakeCount);
+        </script>
+
         <div class="controls">
             <button onclick="toggleLang()" title="تبديل اللغة"><i class="fas fa-language"></i></button>
             <button onclick="toggleMode()" title="تبديل الوضع"><i class="fas fa-moon"></i></button>
@@ -329,7 +356,7 @@
         <div class="lang-toggle" style="display: none;">
             <span class="lang" data-ar="العربية" data-en="English">العربية</span> | <span class="lang" data-ar="الإنجليزية" data-en="English">الإنجليزية</span>
         </div>
-        <h1 class="lang" data-ar="محمد الباقر" data-en="Mohammed Al-Baqer">محمد الباقر</h1>
+        <h1 class="lang" data-ar="مرحبـــاً بكــم" data-en="welcome">مرحبـــاً بكــم</h1>
         <br>
         <div class="subtitle lang" data-ar="مبرمج ومطور برمجيات | مهتم للّينكس والويندوز | تقنيات الأمن السيبراني" data-en="Programmer & Software Developer | Linux & Windows Enthusiast | Cyber Security">مبرمج ومطور برمجيات | مهتم للّينكس والويندوز | تقنيات الأمن السيبراني</div>
         <div class="bio lang" data-ar="أنا محمد الباقر، مطور برمجيات عراقي شغوف بالتقنية والبرمجة منذ الصغر. أمتلك خبرة واسعة في تطوير البرمجيات والأدوات البرمجية على أنظمة لينكس وويندوز، وأهتم بمجالات الأمن السيبراني وأحب استكشاف كل جديد في عالم البرمجة. أؤمن بأن البرمجة ليست مجرد مهنة، بل هي شغف وإبداع مستمر. أطمح دائمًا لتطوير نفسي ومشاركة المعرفة مع الآخرين، وأسعى لبناء حلول تقنية تساهم في تسهيل حياة الناس." data-en="I'm Mohammed Al-Baqer, an Iraqi software developer passionate about technology and programming since childhood. I have extensive experience in scripting and building tools for Linux and Windows, with a keen interest in cybersecurity. I believe programming is not just a job, but a continuous passion and creativity. I always strive to improve myself, share knowledge, and build tech solutions that make people's lives easier.">أنا محمد الباقر، مطور برمجيات عراقي شغوف بالتقنية والبرمجة منذ الصغر. أمتلك خبرة واسعة في تطوير البرمجيات والأدوات البرمجية على أنظمة لينكس وويندوز، وأهتم بمجالات الأمن السيبراني وأحب استكشاف كل جديد في عالم البرمجة. أؤمن بأن البرمجة ليست مجرد مهنة، بل هي شغف وإبداع مستمر. أطمح دائمًا لتطوير نفسي ومشاركة المعرفة مع الآخرين، وأسعى لبناء حلول تقنية تساهم في تسهيل حياة الناس.</div>
@@ -559,6 +586,87 @@
     </div>
 
     <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="جدار الإنجازات" data-en="Wall of Achievements">جدار الإنجازات</h2>
+        <div class="about-me lang" data-ar="- تم إنشاء هذا الجدار لتوثيق إنجازاتي في مجال البرمجة والتطوير.
+- يهدف الجدار إلى مشاركة خبراتي ومشاريعي مع المجتمع التقني.
+- أعتبر كل مشروع قمت به خطوة نحو تحقيق أهدافي في البرمجة.
+- أرحب بأي اقتراحات أو تعليقات لتحسين المشاريع المستقبلية.
+- أتمنى أن يكون هذا الجدار مصدر إلهام للمبرمجين الجدد والمخضرمين على حد سواء." data-en="- This wall was created to document my achievements in programming and development.
+- The wall aims to share my experiences and projects with the tech community.
+- I consider every project I have done a step towards achieving my programming goals.
+- I welcome any suggestions or feedback to improve future projects.
+- I hope this wall serves as an inspiration for both new and experienced programmers."> 
+- تم إنشاء هذا الجدار لتوثيق إنجازاتي في مجال البرمجة والتطوير.
+- يهدف الجدار إلى مشاركة خبراتي ومشاريعي مع المجتمع التقني.
+- أعتبر كل مشروع قمت به خطوة نحو تحقيق أهدافي في البرمجة.
+- أرحب بأي اقتراحات أو تعليقات لتحسين المشاريع المستقبلية.
+- أتمنى أن يكون هذا الجدار مصدر إلهام للمبرمجين الجدد والمخضرمين على حد سواء.
+        </div>
+    </div>
+
+    <!-- جدار الإنجازات (Wall of Achievements) -->
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="كيف بدأت؟" data-en="How I Started?">كيف بدأت؟</h2>
+        <div class="about-me lang" data-ar="- بدأت رحلتي في عالم البرمجة عندما كنت في المدرسة الثانوية.
+- كنت مهتمًا دائمًا بالتكنولوجيا وأحببت فكرة إنشاء برامج وأدوات تساعد الناس.
+- بدأت بتعلم أساسيات البرمجة من خلال قراءة الكتب التقنية ومشاهدة الدروس على الإنترنت.
+- قمت بتطبيق ما تعلمته من خلال مشاريع صغيرة، مثل إنشاء أدوات بسيطة على أنظمة لينكس وويندوز.
+- انضممت إلى مجتمعات البرمجة على الإنترنت، حيث شاركت في مناقشات وطلبت المساعدة من المبرمجين ذوي الخبرة.
+- استمريت في تطوير مهاراتي من خلال قراءة المقالات التقنية، متابعة المدونات، وتجربة تقنيات جديدة.
+- شاركت في مشاريع مفتوحة المصدر، مما ساعدني على فهم كيفية العمل ضمن فريق وتطبيق ما تعلمته في بيئات حقيقية.
+- أؤمن بأن التعلم المستمر هو المفتاح لتطوير مهارات البرمجة، لذلك أخصص وقتًا يوميًا لتعلم أشياء جديدة وتجربة تقنيات مختلفة." data-en="- My programming journey began in high school.
+- I have always been interested in technology and loved the idea of creating programs and tools that help people.
+- I started learning programming basics by reading tech books and watching online tutorials.
+- I applied what I learned through small projects, such as creating simple tools on Linux and Windows.
+- I joined online programming communities, where I participated in discussions and sought help from experienced programmers.
+- I continued to develop my skills by reading tech articles, following blogs, and experimenting with new technologies.
+- I contributed to open-source projects, which helped me understand how to work in a team and apply what I learned in real-world environments.
+- I believe continuous learning is key to improving programming skills, so I dedicate time daily to learn new things and try different technologies.">
+- بدأت رحلتي في عالم البرمجة عندما كنت في المدرسة الثانوية.
+- كنت مهتمًا دائمًا بالتكنولوجيا وأحببت فكرة إنشاء برامج وأدوات تساعد الناس.
+- بدأت بتعلم أساسيات البرمجة من خلال قراءة الكتب التقنية ومشاهدة الدروس على الإنترنت.
+- قمت بتطبيق ما تعلمته من خلال مشاريع صغيرة، مثل إنشاء أدوات بسيطة على أنظمة لينكس وويندوز.
+- انضممت إلى مجتمعات البرمجة على الإنترنت، حيث شاركت في مناقشات وطلبت المساعدة من المبرمجين ذوي الخبرة.
+- استمريت في تطوير مهاراتي من خلال قراءة المقالات التقنية، متابعة المدونات، وتجربة تقنيات جديدة.
+- شاركت في مشاريع مفتوحة المصدر، مما ساعدني على فهم كيفية العمل ضمن فريق وتطبيق ما تعلمته في بيئات حقيقية.
+- أؤمن بأن التعلم المستمر هو المفتاح لتطوير مهارات البرمجة، لذلك أخصص وقتًا يوميًا لتعلم أشياء جديدة وتجربة تقنيات مختلفة.
+        </div>
+    </div>
+
+    <!-- أخطاء شائعة يتجنبها المبرمجون والمطورون -->
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="أخطاء يتجنبها المبرمجون" data-en="Mistakes Developers Avoid">أخطاء يتجنبها المبرمجون</h2>
+        <div class="about-me lang" data-ar="
+- عدم فهم متطلبات المشروع بشكل دقيق قبل البدء في التنفيذ.
+- الاعتماد المفرط على النسخ واللصق (Copy & Paste) دون فهم الكود.
+- تجاهل أهمية كتابة اختبارات للشفرة البرمجية.
+- إهمال استخدام أدوات التحكم في النسخ مثل Git.
+- عدم متابعة أحدث الاتجاهات والتقنيات في مجال البرمجة.
+- التردد في طلب المساعدة عند مواجهة المشاكل.
+- إهمال توثيق الكود وكتابة تعليقات توضيحية.
+- عدم الاهتمام بتحسين الأداء وتجربة المستخدم.
+" data-en="
+- Not understanding project requirements accurately before starting.
+- Over-reliance on copy & paste without understanding the code.
+- Ignoring the importance of writing tests for code.
+- Neglecting to use version control tools like Git.
+- Not keeping up with the latest trends and technologies in programming.
+- Hesitating to ask for help when facing issues.
+- Neglecting code documentation and writing clear comments.
+- Not focusing on performance optimization and user experience.
+">
+- عدم فهم متطلبات المشروع بشكل دقيق قبل البدء في التنفيذ.
+- الاعتماد المفرط على النسخ واللصق (Copy & Paste) دون فهم الكود.
+- تجاهل أهمية كتابة اختبارات للشفرة البرمجية.
+- إهمال استخدام أدوات التحكم في النسخ مثل Git.
+- عدم متابعة أحدث الاتجاهات والتقنيات في مجال البرمجة.
+- التردد في طلب المساعدة عند مواجهة المشاكل.
+- إهمال توثيق الكود وكتابة تعليقات توضيحية.
+- عدم الاهتمام بتحسين الأداء وتجربة المستخدم.
+        </div>
+    </div>
+
+    <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="كيف تعلمت البرمجة؟" data-en="How I Learned Programming?">كيف تعلمت البرمجة؟</h2>
         <div class="about-me lang" data-ar="- بدأت بتعلم البرمجة في سن مبكرة من خلال قراءة الكتب التقنية ومشاهدة الدروس على الإنترنت.
 - استخدمت منصات مثل YouTube وCoursera لتعلم أساسيات البرمجة.
@@ -604,6 +712,38 @@
     </div>
 
     <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="طلب مشروع أو برنامج" data-en="Request a Project or Program">طلب مشروع أو برنامج</h2>
+        <div class="about-me lang" data-ar="يمكنك التواصل معي لطلب تطوير برنامج أو أداة حسب احتياجك، خاصة في مجالات الأمن السيبراني، أدوات اختبار الاختراق، أو أدوات المهام اليومية وغيرها. يرجى اتباع الخطوات التالية عند إرسال الطلب:" data-en="You can contact me to request the development of a program or tool according to your needs, especially in cybersecurity, penetration testing tools, daily task utilities, and more. Please follow these steps when submitting your request:"></div>
+        <ol style="text-align: right; direction: rtl; color: #e0e0e0; font-size: 1.08rem; margin-bottom: 18px;">
+            <li class="lang" data-ar="حدد نوع البرنامج أو الأداة المطلوبة (مثال: أداة اختبار اختراق، برنامج أتمتة مهام، أداة أمن سيبراني، إلخ)." data-en="Specify the type of program or tool needed (e.g., penetration testing tool, automation utility, cybersecurity tool, etc.).">حدد نوع البرنامج أو الأداة المطلوبة (مثال: أداة اختبار اختراق، برنامج أتمتة مهام، أداة أمن سيبراني، إلخ).</li>
+            <li class="lang" data-ar="وضح الهدف من البرنامج أو الأداة بشكل مختصر وواضح." data-en="Briefly and clearly state the purpose of the program or tool.">وضح الهدف من البرنامج أو الأداة بشكل مختصر وواضح.</li>
+            <li class="lang" data-ar="حدد النظام المستهدف (Windows أو Linux أو كلاهما)." data-en="Specify the target system (Windows, Linux, or both).">حدد النظام المستهدف (Windows أو Linux أو كلاهما).</li>
+            <li class="lang" data-ar="إذا كان لديك تصور أو متطلبات للتصميم الداخلي أو واجهة المستخدم، يرجى ذكرها." data-en="If you have requirements for internal design or user interface, please mention them.">إذا كان لديك تصور أو متطلبات للتصميم الداخلي أو واجهة المستخدم، يرجى ذكرها.</li>
+            <li class="lang" data-ar="أرسل الطلب عبر إحدى وسائل التواصل في الأعلى أو البريد الإلكتروني." data-en="Send your request via one of the contact methods above or by email.">أرسل الطلب عبر إحدى وسائل التواصل في الأعلى أو البريد الإلكتروني.</li>
+        </ol>
+        <div style="background: rgba(10,132,255,0.07); padding: 14px 18px; border-radius: 10px; color: #b2becd; font-size: 1.05rem; margin-bottom: 14px;">
+            <span class="lang" data-ar="سأقوم بمراجعة طلبك والتواصل معك لمناقشة التفاصيل وتقديم عرض مناسب." data-en="I will review your request and contact you to discuss details and provide a suitable offer.">سأقوم بمراجعة طلبك والتواصل معك لمناقشة التفاصيل وتقديم عرض مناسب.</span>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 10px;">
+            <span style="font-size: 1.25rem; color: var(--accent2); font-weight: bold;">
+                <span class="lang" data-ar="السعر:" data-en="Price:">السعر:</span>
+                <span style="color: var(--accent); font-size: 1.3rem;">4.99$</span>
+            </span>
+            <span style="background: #ff3b30; color: #fff; font-size: 1rem; border-radius: 8px; padding: 3px 10px; font-weight: bold; margin-right: 6px;">
+                <span class="lang" data-ar="خصم" data-en="Discount">خصم</span>
+                <del style="color: #fff; opacity: 0.7; margin: 0 4px;">14.99$</del>
+                <span class="lang" data-ar="حتى 2025/7/30" data-en="until 2025/7/30">حتى 2025/7/30</span>
+                <a href="https://instagram.com/wsl.iq" data-tooltip="Instagram" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: none; border-radius: 8px; padding: 0; box-shadow: none; text-decoration: none;">
+                    <span style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: #23283b; box-shadow: 0 2px 8px 0 rgba(255,0,128,0.10);">
+                        <i class="fab fa-instagram" style="font-size: 1.5rem; color: #e1306c;"></i>
+                    </span>
+                    <span class="lang" data-ar="للطلب والاستفسار تواصل عبر الإنستكرام" data-en="For requests and inquiries, contact via Instagram" style="font-size: 1.08rem; color: #e0e0e0; font-weight: bold;"></span>
+                </a>
+            </span>
+        </div>
+    </div>
+
+    <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="اللغات" data-en="Languages">اللغات</h2>
         <div class="languages-list">
             <div class="lang-card">
@@ -620,7 +760,7 @@
     </div>
 
     <footer>
-        &copy; <span class="lang" data-ar="(c) 2025 جميع الحقوق محفوظة" data-en=" Copyright (c) 2025">جميع الحقوق محفوظة (c) 2025</span>
+        &copy; <span class="lang" data-ar="جميع الحقوق محفوظة (c) 2025" data-en="Copyright (c) 2025">جميع الحقوق محفوظة (c) 2025</span>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
