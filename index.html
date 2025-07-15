@@ -1,162 +1,654 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mohammed Al-Baqer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>محمد الباقر | Mohammed Al-Baqer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
+        :root {
+            --main-bg: #181c24;
+            --main-text: #f5f6fa;
+            --accent: #00ffd5;
+            --accent2: #0a84ff;
+            --skill-bg: #23283b;
+            --card-bg: #23283b;
+            --shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+            --radius: 18px;
+            --transition: 0.3s cubic-bezier(.4,2,.6,1);
+        }
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #232526 0%, #414345 100%);
-            color: #fff;
+            font-family: 'Cairo', 'Fira Code', monospace, sans-serif;
+            background: var(--main-bg);
+            color: var(--main-text);
             min-height: 100vh;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 500px;
-            margin: 60px auto;
-            background: rgba(30, 30, 40, 0.95);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-            padding: 40px 32px 32px 32px;
-            position: relative;
-            animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) both;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(60px);}
-            100% { opacity: 1; transform: translateY(0);}
-        }
-        .avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #3a3f51;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-            display: block;
-            margin: -80px auto 18px auto;
-            background: #232526;
-            animation: avatarPop 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s both;
-        }
-        @keyframes avatarPop {
-            0% { opacity: 0; transform: scale(0.7);}
-            100% { opacity: 1; transform: scale(1);}
-        }
-        h1 {
-            text-align: center;
-            font-size: 2.2rem;
-            margin: 0 0 10px 0;
-            letter-spacing: 1px;
-        }
-        .bio {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #bfc7d5;
-            margin-bottom: 28px;
+            transition: background var(--transition), color var(--transition);
             line-height: 1.8;
+            font-size: 17px;
+            letter-spacing: 0.01em;
+            box-sizing: border-box;
         }
-        .skills {
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(24,28,36,0.98);
+            box-shadow: var(--shadow);
+            padding: 0 32px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            height: 70px;
+        }
+        nav .title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
             gap: 10px;
-            margin-bottom: 28px;
         }
-        .skill {
-            background: linear-gradient(90deg, #3a3f51 60%, #232526 100%);
-            color: #fff;
-            padding: 7px 18px;
-            border-radius: 18px;
-            font-size: 0.98rem;
+        nav .title i {
+            font-size: 1.7rem;
+            color: var(--accent2);
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(360deg);}
+        }
+        nav .controls button {
+            background: none;
+            border: none;
+            color: var(--accent2);
+            font-size: 1.5rem;
+            margin: 0 6px;
+            cursor: pointer;
+            transition: color var(--transition), transform var(--transition);
+            border-radius: 50%;
+            padding: 8px;
+        }
+        nav .controls button:hover {
+            color: var(--accent);
+            background: #23283b;
+            transform: scale(1.15);
+        }
+
+        header {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 40px 24px 24px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: -80px; left: 50%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, var(--accent2) 0%, transparent 70%);
+            opacity: 0.08;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 10px;
             font-weight: 700;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-            transition: transform 0.18s;
-            cursor: default;
-            user-select: none;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 2px;
         }
-        .skill:hover {
-            transform: scale(1.07) rotate(-2deg);
-            background: linear-gradient(90deg, #232526 60%, #3a3f51 100%);
+        header .subtitle {
+            font-size: 1.3rem;
+            color: #b2becd;
+            margin-bottom: 18px;
+            font-weight: 500;
+            z-index: 1;
+            position: relative;
         }
-        .socials {
+        header .bio {
+            margin: 0 auto 18px;
+            max-width: 650px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            background: rgba(10,132,255,0.07);
+            padding: 16px 20px;
+            border-radius: 12px;
+            z-index: 1;
+            position: relative;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+        }
+        header .location {
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--accent2);
+            font-size: 1.1rem;
+            z-index: 1;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .social {
             display: flex;
             justify-content: center;
             gap: 22px;
-            margin-top: 18px;
+            margin: 32px 0 0;
+            z-index: 1;
+            position: relative;
         }
-        .social-link {
+        .social a {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 54px;
             height: 54px;
             border-radius: 50%;
-            background: #232526;
-            color: #fff;
+            background: linear-gradient(135deg, #23283b 60%, var(--accent2) 100%);
+            color: var(--accent);
             font-size: 2rem;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-            transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
+            box-shadow: 0 2px 12px 0 rgba(0,255,213,0.08);
+            transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
             position: relative;
             overflow: hidden;
-            text-decoration: none;
         }
-        .social-link:hover {
-            background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
+        .social a:hover {
+            background: linear-gradient(135deg, var(--accent2) 60%, #23283b 100%);
             color: #fff;
-            transform: translateY(-6px) scale(1.08);
-            box-shadow: 0 6px 24px rgba(252,92,125,0.18);
-        }
-        .social-link.github:hover { background: linear-gradient(135deg, #232526 0%, #414345 100%);}
-        .social-link.steam:hover { background: linear-gradient(135deg, #1b2838 0%, #66aaff 100%);}
-        .social-link.telegram:hover { background: linear-gradient(135deg, #0088cc 0%, #ffffff 100%);}
-        .social-link.instagram:hover { background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 100%);}
-        .social-link .fa-brands, .social-link .fa-github {
-            transition: transform 0.18s;
-        }
-        .social-link:hover .fa-brands, .social-link:hover .fa-github {
             transform: scale(1.18) rotate(-8deg);
+            box-shadow: 0 4px 24px 0 rgba(0,255,213,0.18);
         }
-        @media (max-width: 600px) {
-            .container { padding: 24px 8px 18px 8px; }
-            .avatar { width: 80px; height: 80px; margin-top: -60px;}
-            h1 { font-size: 1.4rem;}
-            .bio { font-size: 0.98rem;}
-            .social-link { width: 44px; height: 44px; font-size: 1.4rem;}
+        .social a[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #23283b;
+            color: var(--accent2);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            opacity: 1;
+            pointer-events: none;
+            z-index: 2;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13);
+            animation: fadeInUp 0.3s;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 36px auto;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 32px 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .section h2 {
+            color: var(--accent2);
+            font-size: 2rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .about-me {
+            font-size: 1.13rem;
+            color: #e0e0e0;
+            margin-bottom: 18px;
+            text-align: justify;
+            line-height: 2.1;
+        }
+        .skills-list, .languages-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+        .skill-card, .lang-card {
+            background: #1e2230;
+            border-radius: 12px;
+            padding: 18px 22px;
+            min-width: 170px;
+            box-shadow: 0 2px 8px 0 rgba(0,255,213,0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform var(--transition), box-shadow var(--transition);
+            position: relative;
+        }
+        .skill-card:hover, .lang-card:hover {
+            transform: translateY(-7px) scale(1.04);
+            box-shadow: 0 6px 24px 0 rgba(10,132,255,0.13);
+            background: #23283b;
+        }
+        .skill-card i, .lang-card i {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            color: var(--accent2);
+        }
+        .skill-card .skill-title, .lang-card .lang-title {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+        .skill-card .skill-level, .lang-card .lang-level {
+            color: #b2becd;
+            font-size: 0.98rem;
+        }
+        .bar {
+            width: 100%;
+            background: #23283b;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 7px;
+            height: 13px;
+        }
+        .bar-fill {
+            height: 13px;
+            background: linear-gradient(90deg, var(--accent2), var(--accent));
+            border-radius: 8px;
+            transition: width 1.2s cubic-bezier(.4,2,.6,1);
+            text-align: right;
+            color: #181c24;
+            font-weight: bold;
+            font-size: 0.95rem;
+            padding-right: 7px;
+            line-height: 13px;
+        }
+
+        .languages-list .lang-card {
+            min-width: 140px;
+            padding: 14px 16px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0 16px;
+            font-size: 1rem;
+            color: #b2becd;
+            letter-spacing: 0.5px;
+        }
+        @media (max-width: 700px) {
+            header, .section {
+                padding: 18px 6vw;
+            }
+            .skills-list, .languages-list {
+                gap: 10px;
+            }
+            .skill-card, .lang-card {
+                min-width: 120px;
+                padding: 12px 8px;
+            }
+            nav {
+                padding: 0 10px;
+            }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px);}
+            100% { opacity: 1; transform: translateY(0);}
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img class="avatar" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="صورة شخصية">
-        <h1>Mohammed Al-Baqer</h1>
-        <div class="bio"> 
+    <nav>
+        <div class="title"><i class="fas fa-code"></i> محمد الباقر</div>
+        <div class="controls">
+            <button onclick="toggleLang()" title="تبديل اللغة"><i class="fas fa-language"></i></button>
+            <button onclick="toggleMode()" title="تبديل الوضع"><i class="fas fa-moon"></i></button>
+            <button onclick="location.reload()" title="تحديث الصفحة"><i class="fas fa-sync-alt"></i></button>
+            <button onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})" title="الانتقال للأسفل"><i class="fas fa-arrow-down"></i></button>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
         </div>
-        <div class="skills">
-            <div class="skill">Software Developer</div>
-            <div class="skill">Security technology</div>
-            <div class="skill">Help with problems</div>
-            <div class="skill">Linux & Windows</div>
-            <div class="skill">Python Developer</div>
-            <div class="skill">From IRAQ</div>
+    </nav>
+
+    <header data-aos="fade-down">
+        <h1>محمد الباقر</h1>
+        <div class="subtitle lang" data-ar="مبرمج ومطور برمجيات | مهتم للّينكس والويندوز | تقنيات الأمن السيبراني" data-en="Programmer & Software Developer | Linux & Windows Enthusiast | Cyber Security">مبرمج ومطور برمجيات | مهتم للّينكس والويندوز | تقنيات الأمن السيبراني</div>
+        <div class="bio lang" data-ar="أنا محمد الباقر، مطور برمجيات عراقي شغوف بالتقنية والبرمجة منذ الصغر. أمتلك خبرة واسعة في تطوير البرمجيات والأدوات البرمجية على أنظمة لينكس وويندوز، وأهتم بمجالات الأمن السيبراني وأحب استكشاف كل جديد في عالم البرمجة. أؤمن بأن البرمجة ليست مجرد مهنة، بل هي شغف وإبداع مستمر. أطمح دائمًا لتطوير نفسي ومشاركة المعرفة مع الآخرين، وأسعى لبناء حلول تقنية تساهم في تسهيل حياة الناس." data-en="I'm Mohammed Al-Baqer, an Iraqi software developer passionate about technology and programming since childhood. I have extensive experience in scripting and building tools for Linux and Windows, with a keen interest in cybersecurity. I believe programming is not just a job, but a continuous passion and creativity. I always strive to improve myself, share knowledge, and build tech solutions that make people's lives easier.">أنا محمد الباقر، مطور برمجيات عراقي شغوف بالتقنية والبرمجة منذ الصغر. أمتلك خبرة واسعة في تطوير البرمجيات والأدوات البرمجية على أنظمة لينكس وويندوز، وأهتم بمجالات الأمن السيبراني وأحب استكشاف كل جديد في عالم البرمجة. أؤمن بأن البرمجة ليست مجرد مهنة، بل هي شغف وإبداع مستمر. أطمح دائمًا لتطوير نفسي ومشاركة المعرفة مع الآخرين، وأسعى لبناء حلول تقنية تساهم في تسهيل حياة الناس.</div>
+        <div class="location"><i class="fas fa-map-marker-alt"></i> <span class="lang" data-ar="العراق" data-en="Iraq">العراق</span></div>
+        <div class="social" data-aos="fade-up">
+            <a href="https://github.com/wsl-iq" data-tooltip="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/wsl-iq" data-tooltip="Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://instagram.com/wsl.iq" data-tooltip="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://steamcommunity.com/id/MohammedAlBaqer/" data-tooltip="Steam" target="_blank"><i class="fab fa-steam"></i></a>
+            <a href="mailto:your@email.com" data-tooltip="Email" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
-        <div class="socials">
-            <a class="social-link instagram" href="https://instagram.com/wsl.iq" target="_blank" title="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a class="social-link telegram" href="https://t.me/wsl_iq" target="_blank" title="Telegram">
-                <i class="fa-brands fa-telegram"></i>
-            </a>
-            <a class="social-link steam" href="https://steamcommunity.com/id/MohammedAlBaqer/" target="_blank" title="Steam">
-                <i class="fa-brands fa-steam"></i>
-            </a>
-            <a class="social-link github" href="https://github.com/wsl-iq" target="_blank" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+    </header>
+
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="عنّي" data-en="About Me">عنّي</h2>
+        <div class="about-me lang" data-ar="
+- مطور برمجيات بخبرة تزيد عن 5 سنوات في تطوير البرمجيات والأدوات البرمجية.
+- أعمل على أنظمة لينكس و ويندوز، وأتقن التعامل مع الطرفية (Terminal) وأتمتة المهام.
+- مهتم بمجالات الأمن السيبراني، تحليل البرمجيات الخبيثة، واكتشاف الثغرات.
+- أمتلك خبرة في إدارة الخوادم، الشبكات، وحماية الأنظمة.
+- أشارك في المجتمعات التقنية وأحب مساعدة المبرمجين الجدد.
+- أهوى ألعاب الفيديو، القراءة التقنية، وتجربة أنظمة التشغيل المختلفة.
+- أطمح لتطوير مشاريع مفتوحة المصدر تخدم المستخدم العربي و الغربي و العالمي.
+" data-en="
+- Software developer with 5+ years of experience in scripting and tool development.
+- Work on Linux & Windows, proficient in terminal and task automation.
+- GUI application development.
+- Interested in cybersecurity, malware analysis, and vulnerability discovery.
+- Experienced in server administration, networking, and system protection.
+- Active in tech communities and enjoy helping new programmers.
+- Passionate about video games, tech reading, and trying different OSes.
+- Aspire to develop open-source projects for Arab and Western global users.
+">
+- مطور برمجيات بخبرة تزيد عن 5 سنوات في تطوير الرامـج والأدوات البرمجية.
+- أعمل على أنظمة لينكس و ويندوز، وأتقن التعامل مع الطرفية (Terminal) وأتمتة المهام.
+- تطوير البرامج بواجهات رسومية GUI .
+- مهتم بمجالات الأمن السيبراني، تحليل البرمجيات الخبيثة، واكتشاف الثغرات.
+- أمتلك خبرة في إدارة الخوادم، الشبكات، وحماية الأنظمة.
+- أشارك في المجتمعات التقنية وأحب مساعدة المبرمجين الجدد.
+- أهوى ألعاب الفيديو، القراءة التقنية، وتجربة أنظمة التشغيل المختلفة.
+- أطمح لتطوير مشاريع مفتوحة المصدر تخدم المستخدم العربي و الغربي و العالمي.
         </div>
     </div>
+
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="المهارات البرمجية" data-en="Programming Skills">المهارات البرمجية</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <div class="skill-title">Python</div>
+                <div class="skill-level lang" data-ar="احترافي" data-en="Expert">احترافي</div>
+                <div class="bar"><div class="bar-fill" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-terminal"></i>
+                <div class="skill-title">Bash</div>
+                <div class="skill-level lang" data-ar="متقدم" data-en="Advanced">متقدم</div>
+                <div class="bar"><div class="bar-fill" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-file-code"></i>
+                <div class="skill-title">Batchfile</div>
+                <div class="skill-level lang" data-ar="متوسط" data-en="Intermediate">متوسط</div>
+                <div class="bar"><div class="bar-fill" style="width: 60%;">60%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-windows"></i>
+                <div class="skill-title">PowerShell</div>
+                <div class="skill-level lang" data-ar="مبتدئ" data-en="Beginner">مبتدئ</div>
+                <div class="bar"><div class="bar-fill" style="width: 35%;">35%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <div class="skill-title">VBScript</div>
+                <div class="skill-level lang" data-ar="مبتدئ" data-en="Beginner">مبتدئ</div>
+                <div class="bar"><div class="bar-fill" style="width: 25%;">25%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js-square"></i>
+                <div class="skill-title">JavaScript</div>
+                <div class="skill-level lang" data-ar="متوسط" data-en="Intermediate">متوسط</div>
+                <div class="bar"><div class="bar-fill" style="width: 55%;">55%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <div class="skill-title">HTML5</div>
+                <div class="skill-level lang" data-ar="متقدم" data-en="Advanced">متقدم</div>
+                <div class="bar"><div class="bar-fill" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <div class="skill-title">CSS3</div>
+                <div class="skill-level lang" data-ar="متوسط" data-en="Intermediate">متوسط</div>
+                <div class="bar"><div class="bar-fill" style="width: 60%;">60%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <div class="skill-title">SQL</div>
+                <div class="skill-level lang" data-ar="مبتدئ" data-en="Beginner">مبتدئ</div>
+                <div class="bar"><div class="bar-fill" style="width: 30%;">30%</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="الأنظمة" data-en="Systems">الأنظمة</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fab fa-linux"></i>
+                <div class="skill-title lang" data-ar="لينكس" data-en="Linux">لينكس</div>
+                <div class="skill-level lang" data-ar="متحمس" data-en="Enthusiast">متحمس</div>
+                <div class="bar"><div class="bar-fill" style="width: 85%;">85%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-windows"></i>
+                <div class="skill-title lang" data-ar="ويندوز" data-en="Windows">ويندوز</div>
+                <div class="skill-level lang" data-ar="متحمس" data-en="Enthusiast">متحمس</div>
+            
+                <div class="bar"><div class="bar-fill" style="width: 80%;">80%</div></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="المشاريع" data-en="Projects">المشاريع</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <a href="https://github.com/wsl-iq/ISTP" target="_blank" style="text-decoration:none; color:inherit;">
+                    <i class="fas fa-project-diagram"></i>
+                    <div class="skill-title lang" data-ar="قياس سرعة الشبكة" data-en="Network Speed Test">قياس سرعة الشبكة</div>
+                    <div class="skill-level lang" data-ar="مشروع مفتوح المصدر" data-en="Open Source Project">مشروع مفتوح المصدر</div>
+                    <div class="bar"><div class="bar-fill" style="width: 90%;">90%</div></div>
+                </a>
+            </div>
+            <div class="skill-card">
+                <a href="https://github.com/wsl-iq/Manager-Pc" target="_blank" style="text-decoration:none; color:inherit;">
+                    <i class="fas fa-code-branch"></i>
+                    <div class="skill-title lang" data-ar="مدير النظام" data-en="System Manager">مدير النظام</div>
+                    <div class="skill-level lang" data-ar="مشروع مفتوح المصدر" data-en="Open Source Project">مشروع مفتوح المصدر</div>
+                    <div class="bar"><div class="bar-fill" style="width: 85%;">85%</div></div>
+                </a>
+            </div>
+            <div class="skill-card">
+                <a href="https://github.com/wsl-iq/ixdbg" target="_blank" style="text-decoration:none; color:inherit;">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="skill-title lang" data-ar="تحقق من البرمجيات" data-en="Software Verification">تحقق من البرمجيات</div>
+                    <div class="skill-level lang" data-ar="مشروع مفتوح المصدر" data-en="Open Source Project">مشروع مفتوح المصدر</div>
+                    <div class="bar"><div class="bar-fill" style="width: 80%;">80%</div></div>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <div class="skill-title lang" data-ar="أدوات برمجية" data-en="Utility Tools">أدوات برمجية</div>
+                <div class="skill-level lang" data-ar="مشاريع متنوعة" data-en="Various Projects">مشاريع متنوعة</div>
+                <div class="bar"><div class="bar-fill" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-lightbulb"></i>
+                <div class="skill-title lang" data-ar="أفكار جديدة" data-en="New Ideas">أفكار جديدة</div>
+                <div class="skill-level lang" data-ar="قيد التطوير" data-en="In Development">قيد التطوير</div>
+                <div class="bar"><div class="bar-fill" style="width: 70%;">70%</div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="الألعاب المفضلة" data-en="Favorite Games">الألعاب المفضلة</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fas fa-gamepad"></i>
+                <div class="skill-title lang" data-ar="Resident Evil" data-en="Resident Evil">Resident Evil</div>
+                <div class="skill-level lang" data-ar="مغامرة رعب" data-en="Horror Adventure">مغامرة رعب</div>
+                <div class="bar"><div class="bar-fill" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-gamepad"></i>
+                <div class="skill-title lang" data-ar="Medal of Honor" data-en="Medal of Honor">Medal of Honor</div>
+                <div class="skill-level lang" data-ar="حرب تكتيكية" data-en="Tactical Warfare">حرب تكتيكية</div>
+                <div class="bar"><div class="bar-fill" style="width: 85%;">85%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-gamepad"></i>
+                <div class="skill-title lang" data-ar="Mercenaries" data-en="Mercenaries">Mercenaries</div>
+                <div class="skill-level lang" data-ar="مغامرة مرتزقة" data-en="Mercenary Adventure">مغامرة مرتزقة</div>
+                <div class="bar"><div class="bar-fill" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-gamepad"></i>
+                <div class="skill-title lang" data-ar="Silent Hill" data-en="Silent Hill">Silent Hill</div>
+                <div class="skill-level lang" data-ar="رعب نفسي" data-en="Psychological Horror">رعب نفسي</div>
+                <div class="bar"><div class="bar-fill" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-gamepad"></i>
+                <div class="skill-title lang" data-ar="Grand Theft Auto" data-en="Grand Theft Auto">Grand Theft Auto</div>
+                <div class="skill-level lang" data-ar="مغامرة مفتوحة" data-en="Open World Adventure">مغامرة مفتوحة</div>
+                <div class="bar"><div class="bar-fill" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-gamepad"></i>
+                <div class="skill-title lang" data-ar="Black" data-en="Black">Black</div>
+                <div class="skill-level lang" data-ar="إطلاق نار" data-en="Shooting">إطلاق نار</div>
+                <div class="bar"><div class="bar-fill" style="width: 65%;">65%</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!--للتواصل و الدعم عبر master card-->
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="الدعم والتواصل" data-en="Support & Contact">الدعم والتواصل</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fas fa-credit-card"></i>
+                <div class="skill-title lang" data-ar="الدعم عبر ماستر كارد" data-en="Support via MasterCard">الدعم عبر ماستر كارد</div>
+                <div class="skill-level lang" data-ar="للتواصل والدعم" data-en="For contact and support">للتواصل والدعم</div>
+                <div style="margin: 10px 0; font-size: 1.05rem; color: #b2becd;">
+                    <span class="lang" data-ar="رقم الحساب:" data-en="Account Number:">رقم الحساب:</span>
+                    <b>4582149961</b>
+                    <br>
+                    <span class="lang" data-ar="اسم حامل البطاقة:" data-en="Cardholder Name:">اسم حامل البطاقة:</span>
+                    <b>MOHAMMEDALBAQER</b>
+                </div>
+                <div class="bar"><div class="bar-fill" style="width: 100%;">100%</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!--كيف تعلمن و طورت نفسي في البرمجة؟-->
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="كيف تعلمت البرمجة؟" data-en="How I Learned Programming?">كيف تعلمت البرمجة؟</h2>
+        <div class="about-me lang" data-ar="- بدأت بتعلم البرمجة في سن مبكرة من خلال قراءة الكتب التقنية ومشاهدة الدروس على الإنترنت.
+- استخدمت منصات مثل YouTube وCoursera لتعلم أساسيات البرمجة.
+- قمت بتطبيق ما تعلمته من خلال مشاريع صغيرة، مثل إنشاء أدوات بسيطة على أنظمة لينكس وويندوز.
+- انضممت إلى مجتمعات البرمجة على الإنترنت، حيث شاركت في مناقشات وطلبت المساعدة من المبرمجين ذوي الخبرة.
+- استمريت في تطوير مهاراتي من خلال قراءة المقالات التقنية، متابعة المدونات، وتجربة تقنيات جديدة.
+- شاركت في مشاريع مفتوحة المصدر، مما ساعدني على فهم كيفية العمل ضمن فريق وتطبيق ما تعلمته في بيئات حقيقية.
+- أؤمن بأن التعلم المستمر هو المفتاح لتطوير مهارات البرمجة، لذلك أخصص وقتًا يوميًا لتعلم أشياء جديدة وتجربة تقنيات مختلفة." data-en="- I started learning programming at an early age by reading tech books and watching online tutorials.
+- I used platforms like YouTube and Coursera to learn programming basics.
+- I applied what I learned through small projects, such as creating simple tools on Linux and Windows.
+- I joined online programming communities, where I participated in discussions and sought help from experienced programmers.
+- I continued to develop my skills by reading tech articles, following blogs, and experimenting with new technologies.
+- I contributed to open-source projects, which helped me understand how to work in a team and apply what I learned in real-world environments.
+- I believe continuous learning is key to improving programming skills, so I dedicate time daily to learn new things and try different technologies.">
+- بدأت بتعلم البرمجة في سن مبكرة من خلال قراءة الكتب التقنية ومشاهدة الدروس على الإنترنت.
+- استخدمت منصات مثل YouTube وCoursera لتعلم أساسيات البرمجة.
+- قمت بتطبيق ما تعلمته من خلال مشاريع صغيرة، مثل إنشاء أدوات بسيطة على أنظمة لينكس وويندوز.
+- انضممت إلى مجتمعات البرمجة على الإنترنت، حيث شاركت في من
+اقشات وطلبت المساعدة من المبرمجين ذوي الخبرة.
+- استمريت في تطوير مهاراتي من خلال قراءة المقالات التقنية، متابعة المدونات، وتجربة تقنيات جديدة.
+- شاركت في مشاريع مفتوحة المصدر، مما ساعدني على فهم كيفية العمل ضمن فريق وتطبيق ما تعلمته في بيئات حقيقية.
+- أؤمن بأن التعلم المستمر هو المفتاح لتطوير مهارات البرمجة، لذلك أخصص وقتًا يوميًا لتعلم أشياء جديدة وتجربة تقنيات مختلفة تغير من المستوى نحو الافضل.
+        </div>
+    </div>
+
+    <!-- هل تعلمت من الأخطاء؟ -->
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="هل تعلمت من الأخطاء؟" data-en="Did I Learn from Mistakes?">هل تعلمت من الأخطاء؟</h2>
+        <div class="about-me lang" data-ar="- نعم، الأخطاء كانت جزءًا مهمًا من رحلتي في تعلم البرمجة.
+- تعلمت من الأخطاء التي ارتكبتها في الكود، حيث كنت أعود وأحلل المشكلة لفهم السبب الجذري.
+- ساعدتني هذه الأخطاء على تحسين مهاراتي في التصحيح والبحث عن الحلول.
+- أؤمن بأن الأخطاء هي فرص للتعلم، لذلك أتعامل معها بإيجابية وأستخدمها كدروس لتحسين نفسي كمطور.
+- أشارك هذه التجارب مع المبرمجين الجدد لأشجعهم على عدم الخوف من الأخطاء، بل اعتبرها جزءًا طبيعيًا من عملية التعلم والنمو في مجال البرمجة." data-en="- Yes, mistakes were an important part of my programming learning journey.
+- I learned from the mistakes I made in my code, where I would go back and analyze the problem to understand the root cause.
+- These mistakes helped me improve my debugging skills and problem-solving abilities.
+- I believe mistakes are opportunities for learning, so I approach them positively and use them as lessons to improve myself as a developer.
+- I share these experiences with new programmers to encourage them not to fear mistakes, but to see them as a natural part of the learning and growth process in programming.">
+    </div>
+        - نعم، الأخطاء كانت جزءًا مهمًا من رحلتي في تعلم البرمجة.
+        - تعلمت من الأخطاء التي ارتكبتها في الكود، حيث كنت أعود وأحلل المشكلة لفهم السبب الجذري.
+        - ساعدتني هذه الأخطاء على تحسين مهاراتي في التصحيح والبحث عن الحلول.
+        - أؤمن بأن الأخطاء هي فرص للتعلم، لذلك أتعامل معها بإيجابية وأستخدمها كدروس لتحسين نفسي كمطور.
+        - أشارك هذه التجارب مع المبرمجين الجدد لأشجعهم على عدم الخوف من الأخطاء، بل اعتبرها جزءًا طبيعيًا من عملية التعلم والنمو في مجال البرمجة.
+    </div>
+
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="اللغات" data-en="Languages">اللغات</h2>
+        <div class="languages-list">
+            <div class="lang-card">
+                <i class="fas fa-language"></i>
+                <div class="lang-title lang" data-ar="العربية" data-en="Arabic">العربية</div>
+                <div class="lang-level lang" data-ar="اللغة الأم" data-en="Native">اللغة الأم</div>
+            </div>
+            <div class="lang-card">
+                <i class="fas fa-language"></i>
+                <div class="lang-title lang" data-ar="الإنجليزية" data-en="English">الإنجليزية</div>
+                <div class="lang-level lang" data-ar="جيد جدًا" data-en="Very Good">جيد جدًا</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; <span class="lang" data-ar="(c) 2025 جميع الحقوق محفوظة" data-en=" Copyright (c) 2025">جميع الحقوق محفوظة (c) 2025</span>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        function toggleLang() {
+            const body = document.body;
+            body.classList.toggle('en');
+            const isEnglish = body.classList.contains('en');
+            document.documentElement.setAttribute('lang', isEnglish ? 'en' : 'ar');
+            document.documentElement.setAttribute('dir', 'rtl');
+            document.querySelectorAll('.lang').forEach(el => {
+                el.textContent = isEnglish ? el.dataset.en : el.dataset.ar;
+            });
+        }
+
+        function toggleMode() {
+            const root = document.documentElement;
+            const isLight = root.style.getPropertyValue('--main-bg') === '#f5f6fa';
+            root.style.setProperty('--main-bg', isLight ? '#181c24' : '#f5f6fa');
+            root.style.setProperty('--main-text', isLight ? '#f5f6fa' : '#181c24');
+            root.style.setProperty('--skill-bg', isLight ? '#23283b' : '#e0e0e0');
+            root.style.setProperty('--card-bg', isLight ? '#23283b' : '#fff');
+        }
+    </script>
 </body>
 </html>
