@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: visitors-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    rootDir: src
+    envVars:
+      - key: PORT
+        value: 10000
