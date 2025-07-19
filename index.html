@@ -445,33 +445,8 @@
 </head>
 <body>
     <nav>
+
         <div class="title"><i class="fas fa-code"></i> محمد الباقر</div>
-
-        <div style="color: var(--accent2); font-size: 1.1rem; display: flex; align-items: center; gap: 7px;">
-            <i class="fas fa-users"></i>
-            <span id="visitor-count">عدد الزوار: <b>0</b></span>
-        </div>
-        <script>
-            function animateVisitorCount(target) {
-            const el = document.getElementById('visitor-count').getElementsByTagName('b')[0];
-            let current = 0;
-            const step = Math.ceil(target / 60);
-            function update() {
-                current += step;
-                if (current >= target) {
-                el.textContent = target.toLocaleString('ar-EG');
-                } else {
-                el.textContent = current.toLocaleString('ar-EG');
-                setTimeout(update, 20);
-                }
-            }
-            update();
-            }
-            const fakeCount = Math.floor(Math.random() * 250) + 120;
-            document.getElementById('visitor-count').innerHTML = 'عدد الزوار: <b>0</b>';
-            animateVisitorCount(fakeCount);
-        </script>
-
         <div class="controls">
             <button onclick="toggleLang()" title="تبديل اللغة"><i class="fas fa-language"></i></button>
             <button onclick="toggleMode()" title="تبديل الوضع"><i class="fas fa-moon"></i></button>
@@ -638,7 +613,6 @@
                     <div class="bar"><div class="bar-fill" style="width: 80%;">80%</div></div>
                 </a>
             </div>
-            <!--اداة توليد كلمات المرور رابط https://github.com/wsl-iq/GeneratePasswords مفتوحة المصدر-->
             <div class="skill-card">
                 <a href="https://github.com/wsl-iq/GeneratePasswords" target="_blank" style="text-decoration:none; color:inherit;">
                     <i class="fas fa-key"></i>
@@ -1037,7 +1011,200 @@
                 </a>
             </div>
         </div>
-    </div>     
+    </div>
+
+    <!-- اساسيات الامن السيبراني-->
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="أساسيات الأمن السيبراني" data-en="Cybersecurity Essentials">أساسيات الأمن السيبراني</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fas fa-shield-alt"></i>
+                <div class="skill-title lang" data-ar="مقدمة في الأمن السيبراني" data-en="Introduction to Cybersecurity">مقدمة في الأمن السيبراني</div>
+                <div class="skill-level lang" data-ar="أساسيات الحماية من التهديدات الإلكترونية" data-en="Basics of Protection from Cyber Threats">أساسيات الحماية من التهديدات الإلكترونية</div>
+                <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/introduction-cyber-security" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-lock"></i>
+                <div class="skill-title lang" data-ar="تأمين الشبكات" data-en="Network Security">تأمين الشبكات</div>
+                <div class="skill-level lang" data-ar="حماية الشبكات من التهديدات" data-en="Protecting Networks from Threats">حماية الشبكات من التهديدات</div>
+                <a href="https://www.cisco.com/c/en/us/products/security/what-is-network-security.html" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-user-shield"></i>
+                <div class="skill-title lang" data-ar="حماية الهوية" data-en="Identity Protection">حماية الهوية</div>
+                <div class="skill-level lang" data-ar="أساليب حماية المعلومات الشخصية" data-en="Methods of Protecting Personal Information">أساليب حماية المعلومات الشخصية</div>
+                <a href="https://www.identitytheft.gov/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-virus"></i>
+                <div class="skill-title lang" data-ar="مكافحة الفيروسات والبرمجيات الخبيثة" data-en="Antivirus and Malware Protection">مكافحة الفيروسات والبرمجيات الخبيثة</div>
+                <div class="skill-level lang" data-ar="كيفية حماية الأنظمة من البرمجيات الضارة" data-en="How to Protect Systems from Malicious Software">كيفية حماية الأنظمة من البرمجيات الضارة</div>
+                <a href="https://www.av-test.org/en/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-key"></i>
+                <div class="skill-title lang" data-ar="إدارة كلمات المرور" data-en="Password Management">إدارة كلمات المرور</div>
+                <div class="skill-level lang" data-ar="كيفية إنشاء وحماية كلمات المرور" data-en="How to Create and Protect Passwords">كيفية إنشاء وحماية كلمات المرور</div>
+                <a href="https://www.passwordmanager.com/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-shield-virus"></i>
+                <div class="skill-title lang" data-ar="التشفير" data-en="Encryption">التشفير</div>
+                <div class="skill-level lang" data-ar="أساسيات حماية البيانات" data-en="Basics of Data Protection">أساسيات حماية البيانات</div>
+                <a href="https://www.cloudflare.com/learning/how-to-encrypt-data/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-network-wired"></i>
+                <div class="skill-title lang" data-ar="VPN و Proxy" data-en="VPN and Proxy">VPN و Proxy</div>
+                <div class="skill-level lang" data-ar="كيفية استخدام VPN و Proxy لحماية الخصوصية" data-en="How to Use VPN and Proxy for Privacy Protection">كيفية استخدام VPN و Proxy لحماية الخصوصية</div>
+                <a href="https://www.vpnmentor.com/blog/what-is-a-vpn/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="skill-title lang" data-ar="التوعية بالتهديدات السيبرانية" data-en="Cyber Threat Awareness">التوعية بالتهديدات السيبرانية</div>
+                <div class="skill-level lang" data-ar="كيفية التعرف على التهديدات والتعامل معها" data-en="How to Recognize and Handle Threats">كيفية التعرف على التهديدات والتعامل معها</div>
+                <a href="https://www.cyberaware.gov/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا للقراءة" data-en="Click here to read">اضغط هنا للقراءة</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" data-aos="fade-up">
+        <h2 class="lang" data-ar="تعلم البرمجة" data-en="Learn Programming">تعلم البرمجة</h2>
+        <div class="skills-list">
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <div class="skill-title lang" data-ar="Python" data-en="Python">Python</div>
+                <div class="skill-level lang" data-ar="لغة برمجة قوية وسهلة" data-en="Powerful and Simple Language">لغة برمجة قوية وسهلة</div>
+                <a href="https://www.w3schools.com/python/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <div class="skill-title lang" data-ar="C" data-en="C">C</div>
+                <div class="skill-level lang" data-ar="أساس البرمجة منخفضة المستوى" data-en="Low-Level Programming Foundation">أساس البرمجة منخفضة المستوى</div>
+                <a href="https://www.w3schools.com/c/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <div class="skill-title lang" data-ar="++C" data-en="++C">++C</div>
+                <div class="skill-level lang" data-ar="لغة برمجة قوية ومتعددة الاستخدامات" data-en="Powerful and Versatile Programming Language">لغة برمجة قوية ومتعددة الاستخدامات</div>
+                <a href="https://www.w3schools.com/cpp/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code-branch"></i>
+                <div class="skill-title lang" data-ar="#C" data-en="#C">#C</div>
+                <div class="skill-level lang" data-ar="لغة برمجة حديثة من مايكروسوفت" data-en="Modern Programming Language by Microsoft">لغة برمجة حديثة من مايكروسوفت</div>
+                <a href="https://www.w3schools.com/cs/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <div class="skill-title lang" data-ar="HTML" data-en="HTML">HTML</div>
+                <div class="skill-level lang" data-ar="لغة بناء صفحات الويب" data-en="Web Page Markup Language">لغة بناء صفحات الويب</div>
+                <a href="https://www.w3schools.com/html/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i>
+                <div class="skill-title lang" data-ar="CSS" data-en="CSS">CSS</div>
+                <div class="skill-level lang" data-ar="تصميم صفحات الويب" data-en="Web Page Styling">تصميم صفحات الويب</div>
+                <a href="https://www.w3schools.com/css/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-terminal"></i>
+                <div class="skill-title lang" data-ar="Bash Script" data-en="Bash Script">Bash Script</div>
+                <div class="skill-level lang" data-ar="لغة برمجة سطر الأوامر" data-en="Command Line Scripting Language">لغة برمجة سطر الأوامر</div>
+                <a href="https://www.w3schools.com/bash/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <div class="skill-title lang" data-ar="JavaScript" data-en="JavaScript">JavaScript</div>
+                <div class="skill-level lang" data-ar="لغة برمجة الويب" data-en="Web Programming Language">لغة برمجة الويب</div>
+                <a href="https://www.w3schools.com/js/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-java"></i>
+                <div class="skill-title lang" data-ar="Java" data-en="Java">Java</div>
+                <div class="skill-level lang" data-ar="لغة برمجة متعددة الاستخدامات" data-en="Versatile Programming Language">لغة برمجة متعددة الاستخدامات</div>
+                <a href="https://www.w3schools.com/java/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-php"></i>
+                <div class="skill-title lang" data-ar="PHP" data-en="PHP">PHP</div>
+                <div class="skill-level lang" data-ar="لغة برمجة الويب الديناميكية" data-en="Dynamic Web Programming Language">لغة برمجة الويب الديناميكية</div>
+                <a href="https://www.w3schools.com/php/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-gem"></i>
+                <div class="skill-title lang" data-ar="Ruby" data-en="Ruby">Ruby</div>
+                <div class="skill-level lang" data-ar="لغة برمجة مرنة وسهلة الاستخدام" data-en="Flexible and Easy-to-Use Programming Language">لغة برمجة مرنة وسهلة الاستخدام</div>
+                <a href="https://www.w3schools.com/ruby/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-rocket"></i>
+                <div class="skill-title lang" data-ar="Rust" data-en="Rust">Rust</div>
+                <div class="skill-level lang" data-ar="لغة برمجة آمنة وعالية الأداء" data-en="Safe and High-Performance Programming Language">لغة برمجة آمنة وعالية الأداء</div>
+                <a href="https://www.w3schools.com/rust/" target="_blank" style="display: flex; align-items: center; justify-content: center; margin-top: 10px; background: #23283b; color: var(--accent2); padding: 7px 18px; border-radius: 8px; font-size: 1.05rem; font-weight: bold; text-decoration: none; transition: background 0.3s;">
+                    <i class="fas fa-book-open" style="margin-left:8px;"></i>
+                    <span class="lang" data-ar="اضغط هنا" data-en="Click here">اضغط هنا</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="اللغات" data-en="Languages">اللغات</h2>
