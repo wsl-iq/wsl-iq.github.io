@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>محمد الباقر | Mohammed Al-Baqer</title>
 
+    <link rel="icon" href="hhttps://avatars.githubusercontent.com/u/195442557?s=400&u=375a708aaaee2db2df2a33f06eedb884ad04fe58&v=4" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1z8k2b3Z7f4+9d5e5c5a8f8b8c8e4d2
+8f8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" integrity="sha512-8z8k2b3Z7f4+9d5e5c5a8f8b8c8e4d28f8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -12,25 +17,33 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#181c24">
+
     <style>
         :root {
-            --main-bg: #181c24;
-            --main-text: #f5f6fa;
-            --accent: #00ffd5;
-            --accent2: #0a84ff;
-            --skill-bg: #23283b;
-            --card-bg: #23283b;
-            --shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
-            --radius: 1.125rem;
-            --transition: 0.3s cubic-bezier(.4,2,.6,1);
-        }
+    --main-bg: #181c24;
+    --main-text: #f5f6fa;
+    --accent: #00ffd5;
+    --accent2: #0a84ff;
+    --skill-bg: #23283b;
+    --card-bg: #23283b;
+    --shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+    --radius: 1.125rem;
+    --transition: 0.3s cubic-bezier(.4,2,.6,1);
+    --font-family: 'Cairo', 'Fira Code', monospace, sans-serif;}
         html {
             box-sizing: border-box;
             font-size: 16px;
+            overflow-x: hidden;
         }
+
         *, *::before, *::after {
             box-sizing: inherit;
         }
+
         body {
             margin: 0;
             padding: 0;
@@ -42,7 +55,9 @@
             line-height: 1.8;
             font-size: 1.0625rem;
             letter-spacing: 0.01em;
+            overflow-x: hidden;
         }
+
         nav {
             position: sticky;
             top: 0;
@@ -56,6 +71,7 @@
             min-height: 4.375rem;
             width: 100%;
         }
+
         nav .title {
             font-weight: bold;
             font-size: 1.5rem;
@@ -65,20 +81,24 @@
             align-items: center;
             gap: 0.625rem;
         }
+
         nav .title i {
             font-size: 1.7rem;
             color: var(--accent2);
             animation: spin 2s linear infinite;
         }
+
         @keyframes spin {
             0% {transform: rotate(0);}
             100% {transform: rotate(360deg);}
         }
+
         nav .controls {
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+
         nav .controls button {
             background: none;
             border: none;
@@ -90,17 +110,20 @@
             border-radius: 50%;
             padding: 0.5rem;
         }
+
         nav .controls button:hover {
             color: var(--accent);
             background: #23283b;
             transform: scale(1.15);
         }
+
         nav > div:not(.title):not(.controls) {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             font-size: 1.1rem;
         }
+
         header {
             max-width: 56.25rem;
             margin: 2.5rem auto 0;
@@ -113,6 +136,7 @@
             overflow: hidden;
             width: 95%;
         }
+
         header::before {
             content: "";
             position: absolute;
@@ -123,6 +147,7 @@
             transform: translateX(-50%);
             z-index: 0;
         }
+
         header h1 {
             font-size: 2.2rem;
             color: var(--accent);
@@ -131,7 +156,9 @@
             position: relative;
             z-index: 1;
             letter-spacing: 2px;
+            text-align: center;
         }
+
         header .subtitle {
             font-size: 1.15rem;
             color: #b2becd;
@@ -139,7 +166,9 @@
             font-weight: 500;
             z-index: 1;
             position: relative;
+            text-align: center;
         }
+
         header .bio {
             margin: 0 auto 1.125rem;
             max-width: 40.625rem;
@@ -151,7 +180,9 @@
             z-index: 1;
             position: relative;
             box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+            text-align: center;
         }
+
         header .location {
             margin-top: 0.625rem;
             font-weight: bold;
@@ -163,6 +194,7 @@
             align-items: center;
             gap: 0.4375rem;
         }
+
         .social {
             display: flex;
             justify-content: center;
@@ -172,6 +204,7 @@
             position: relative;
             flex-wrap: wrap;
         }
+
         .social a {
             display: flex;
             align-items: center;
@@ -187,12 +220,14 @@
             position: relative;
             overflow: hidden;
         }
+
         .social a:hover {
             background: linear-gradient(135deg, var(--accent2) 60%, #23283b 100%);
             color: #fff;
             transform: scale(1.18) rotate(-8deg);
             box-shadow: 0 4px 24px 0 rgba(0,255,213,0.18);
         }
+
         .social a[data-tooltip]:hover::after {
             content: attr(data-tooltip);
             position: absolute;
@@ -211,6 +246,7 @@
             box-shadow: 0 2px 8px 0 rgba(0,0,0,0.13);
             animation: fadeInUp 0.3s;
         }
+
         .section {
             max-width: 56.25rem;
             margin: 2.25rem auto;
@@ -222,6 +258,7 @@
             z-index: 1;
             width: 95%;
         }
+
         .section h2 {
             color: var(--accent2);
             font-size: 2rem;
@@ -230,6 +267,7 @@
             letter-spacing: 1px;
             text-align: center;
         }
+
         .about-me {
             font-size: 1.13rem;
             color: #e0e0e0;
@@ -237,6 +275,7 @@
             text-align: justify;
             line-height: 2.1;
         }
+
         .skills-list, .languages-list {
             display: flex;
             flex-wrap: wrap;
@@ -244,6 +283,7 @@
             justify-content: center;
             margin-bottom: 1.125rem;
         }
+
         .skill-card, .lang-card {
             background: #1e2230;
             border-radius: 0.75rem;
@@ -258,16 +298,19 @@
             flex: 1 1 12rem;
             max-width: 15rem;
         }
+
         .skill-card:hover, .lang-card:hover {
             transform: translateY(-0.4375rem) scale(1.04);
             box-shadow: 0 6px 24px 0 rgba(10,132,255,0.13);
             background: #23283b;
         }
+
         .skill-card i, .lang-card i {
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
             color: var(--accent2);
         }
+
         .skill-card .skill-title, .lang-card .lang-title {
             font-weight: bold;
             color: var(--accent);
@@ -275,10 +318,12 @@
             margin-bottom: 0.25rem;
             letter-spacing: 0.5px;
         }
+
         .skill-card .skill-level, .lang-card .lang-level {
             color: #b2becd;
             font-size: 0.98rem;
         }
+
         .bar {
             width: 100%;
             background: #23283b;
@@ -287,6 +332,7 @@
             margin-top: 0.4375rem;
             height: 0.8125rem;
         }
+
         .bar-fill {
             height: 0.8125rem;
             background: linear-gradient(90deg, var(--accent2), var(--accent));
@@ -299,11 +345,13 @@
             padding-right: 0.4375rem;
             line-height: 0.8125rem;
         }
+
         .languages-list .lang-card {
             min-width: 8.75rem;
             padding: 0.875rem 1rem;
             max-width: 10rem;
         }
+
         footer {
             text-align: center;
             margin: 2.5rem 0 1rem;
@@ -311,93 +359,36 @@
             color: #b2becd;
             letter-spacing: 0.5px;
         }
-        /* Responsive styles for tablets and below */
+
+        /* Responsive for tablets and below */
         @media (max-width: 900px) {
             html { font-size: 15px; }
             header, .section {
                 max-width: 98vw;
                 padding: 1.5rem 2vw;
             }
-            .skills-list, .languages-list {
-                gap: 0.75rem;
-            }
-            .skill-card, .lang-card {
-                min-width: 8rem;
-                max-width: 13rem;
-                padding: 0.75rem 0.5rem;
-            }
         }
-        /* Responsive styles for mobile */
+
+        /* Responsive for mobile */
         @media (max-width: 768px) {
             html { font-size: 14px; }
             nav {
                 flex-direction: column;
                 align-items: stretch;
-                padding: 0 1vw;
+                padding: 0.5rem 1rem;
                 min-height: 3.5rem;
                 gap: 0.5rem;
             }
             nav .title {
                 font-size: 1.1rem;
-                gap: 0.375rem;
                 justify-content: center;
+                gap: 0.375rem;
             }
             nav .title i {
                 font-size: 1.2rem;
             }
-            nav .controls button {
-                font-size: 1.1rem;
-                padding: 0.3rem;
-                margin: 0 0.1rem;
-            }
-            nav > div:not(.title):not(.controls) {
-                font-size: 1rem;
-                justify-content: center;
-            }
-            header, .section {
-                padding: 1rem 2vw;
-                margin: 1rem auto 0;
-            }
-            header h1 {
-                font-size: 1.3rem;
-                letter-spacing: 1px;
-            }
-            header .subtitle {
-                font-size: 1rem;
-            }
-            header .bio {
-                font-size: 0.95rem;
-                padding: 0.7rem 0.5rem;
-            }
-            header .location {
-                font-size: 0.95rem;
-                gap: 0.25rem;
-            }
-            .social {
-                gap: 0.5rem;
-                margin: 1rem 0 0;
-                flex-wrap: wrap;
-            }
-            .social a {
-                width: 2.25rem;
-                height: 2.25rem;
-                font-size: 1.2rem;
-            }
-            .section h2 {
-                font-size: 1.1rem;
-                margin-bottom: 0.5rem;
-            }
-            .about-me {
-                font-size: 0.95rem;
-                line-height: 1.7;
-            }
-            .bar {
-                height: 0.5rem;
-            }
-            .bar-fill {
-                font-size: 0.7rem;
-                padding-right: 0.2rem;
-                line-height: 0.5rem;
+            header h1, header .subtitle, header .bio {
+                text-align: center;
             }
             .skills-list, .languages-list {
                 flex-direction: column;
@@ -405,21 +396,13 @@
                 gap: 0.5rem;
             }
             .skill-card, .lang-card {
-                min-width: 100%;
-                max-width: 100%;
                 width: 100%;
-                padding: 0.5rem 0.3rem;
-            }
-            .languages-list .lang-card {
-                min-width: 5rem;
-                padding: 0.5rem 0.2rem;
-            }
-            footer {
-                font-size: 0.85rem;
-                margin: 1.5rem 0 0.5rem;
+                max-width: 100%;
+                padding: 0.75rem 1rem;
             }
         }
-        /* Extra small devices */
+
+        /* Extra small */
         @media (max-width: 400px) {
             html { font-size: 12px; }
             header, .section {
@@ -433,14 +416,18 @@
                 max-width: 100%;
                 padding: 0.3rem 0.1rem;
             }
-            .section h2 {
-                font-size: 0.95rem;
-            }
         }
+
         @keyframes fadeInUp {
             0% { opacity: 0; transform: translateY(20px);}
             100% { opacity: 1; transform: translateY(0);}
         }
+        body[data-theme="dark"] {
+                background-color: #181c24;
+                color: #dcdfe4;
+                --main-bg: #181c24;
+                --font-family: 'Cairo', 'Fira Code', monospace, sans-serif;
+            }
     </style>
 </head>
 <body>
