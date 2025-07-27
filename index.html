@@ -59,8 +59,9 @@
         }
 
         nav {
-            position: sticky;
+            position: fixed; /* ← بدل sticky */
             top: 0;
+            left: 0;
             background: rgba(24,28,36,0.98);
             box-shadow: var(--shadow);
             padding: 0 2rem;
@@ -71,6 +72,7 @@
             min-height: 4.375rem;
             width: 100%;
         }
+
 
         nav .title {
             font-weight: bold;
@@ -1000,7 +1002,6 @@
         </div>
     </div>
 
-    <!-- اساسيات الامن السيبراني-->
     <div class="section" data-aos="fade-up">
         <h2 class="lang" data-ar="أساسيات الأمن السيبراني" data-en="Cybersecurity Essentials">أساسيات الأمن السيبراني</h2>
         <div class="skills-list">
