@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1z8k2b3Z7f4+9d5e5c5a8f8b8c8e4d2
 8f8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" integrity="sha512-8z8k2b3Z7f4+9d5e5c5a8f8b8c8e4d28f8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f8b8c8e4d2a5b5c5a8f" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -63,7 +62,7 @@
             top: 0;
             left: 0;
             background: rgba(24,28,36,0.98);
-            box-shadow: var(--shadow);
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10); /* lighter shadow for better performance */
             padding: 0 2rem;
             display: flex;
             justify-content: space-between;
@@ -218,7 +217,7 @@
             color: var(--accent);
             font-size: 2rem;
             box-shadow: 0 2px 12px 0 rgba(0,255,213,0.08);
-            transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+            transition: background var(--transition), color var(--transition), transform var(--transition); /* removed box-shadow from transition for performance */
             position: relative;
             overflow: hidden;
         }
@@ -295,7 +294,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: transform var(--transition), box-shadow var(--transition);
+            transition: transform var(--transition); /* removed box-shadow from transition for performance */
             position: relative;
             flex: 1 1 12rem;
             max-width: 15rem;
@@ -462,6 +461,31 @@
             <a href="https://steamcommunity.com/id/MohammedAlBaqer/" data-tooltip="Steam" target="_blank"><i class="fab fa-steam"></i></a>
             <a href="mailto:mr.mohammed.al.baqer@gmail.com" data-tooltip="Email" target="_blank"><i class="fas fa-envelope"></i></a>
             <a href="https://linktr.ee/wsl.iq" data-tooltip="Linktree" target="_blank"><i class="fas fa-link"></i></a>
+        </div>
+    </header>
+
+    <header data-aos="fade-down">
+        <div class="lang-toggle" style="display: none;">
+            <span class="lang" data-ar="العربية" data-en="English">العربية</span> | <span class="lang" data-ar="الإنجليزية" data-en="English">الإنجليزية</span>
+        </div>
+        <h1 class="lang" data-ar="حمل برنامج تعلم Python" data-en="Download Python Learning Program">حمل برنامج تعلم Python</h1>
+        <div class="download-buttons">
+            <a href="https://t.me/MohmmadALBaqer/193" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#23283b;color:var(--accent2);padding:10px 22px;border-radius:10px;font-size:1.12rem;font-weight:bold;text-decoration:none;transition:background 0.3s;margin:6px;">
+                <i class="fab fa-windows" style="font-size:1.6rem;color:#00a4ef;"></i>
+                <span class="lang" data-ar="تحميل للويندوز" data-en="Download for Windows">تحميل للويندوز</span>
+            </a>
+            <span style="display:inline-flex;align-items:center;gap:8px;background:#23283b;color:#b2becd;padding:10px 22px;border-radius:10px;font-size:1.12rem;font-weight:bold;margin:6px;opacity:0.7;cursor:not-allowed;">
+                <i class="fab fa-linux" style="font-size:1.6rem;color:#fff;"></i>
+                <span class="lang" data-ar="لينكس : يتوفر قريباً" data-en="Linux: Coming Soon">لينكس : يتوفر قريباً</span>
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:8px;background:#23283b;color:#b2becd;padding:10px 22px;border-radius:10px;font-size:1.12rem;font-weight:bold;margin:6px;opacity:0.7;cursor:not-allowed;">
+                <i class="fab fa-android" style="font-size:1.6rem;color:#3ddc84;"></i>
+                <span class="lang" data-ar="أندرويد : في وضع التطوير" data-en="Android: In Development">أندرويد : في وضع التطوير</span>
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:8px;background:#23283b;color:#b2becd;padding:10px 22px;border-radius:10px;font-size:1.12rem;font-weight:bold;margin:6px;opacity:0.7;cursor:not-allowed;">
+                <i class="fab fa-apple" style="font-size:1.6rem;color:#fff;"></i>
+                <span class="lang" data-ar="ماك بوك : غير متوفر الآن" data-en="Mac Book: Not Available Now">ماك بوك : غير متوفر الآن</span>
+            </span>
         </div>
     </header>
 
