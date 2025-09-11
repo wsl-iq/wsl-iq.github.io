@@ -169,48 +169,71 @@ if(navClose) {
 }
 
 // حقل التواصل عبر البريد الالكتروني و لدي ID من موقع EmailJS : ID service_7ocfbtu
-const contactForm = document.getElementById('contact-form');
+// تهيئة EmailJS — ضع المفتاح العام الخاص بك هنا
+emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // استبدل YOUR_EMAILJS_PUBLIC_KEY بالمفتاح الحقيقي
+
+const contactForm = document.querySelector('.contact-form');
 const contactName = document.getElementById('contact-name');
 const contactEmail = document.getElementById('contact-email');
-const contactProject = document.getElementById('contact-project');
-const contactMessage = document.getElementById('contact-message');
+const contactPhone = document.getElementById('contact-phone');
+const contactMessageInput = document.getElementById('contact-message');
 
-const sendEmail = (e) => {
-    e.preventDefault();
+if (contactForm) {
+    // Create a message element to show feedback
+    let feedbackMsg = document.createElement('div');
+    feedbackMsg.style.marginTop = '10px';
+    contactForm.appendChild(feedbackMsg);
 
-    if(contactName.value === '' || contactEmail.value === '' || contactProject.value === '') {
-        contactMessage.classList.remove('color-blue');
-        contactMessage.classList.add('color-red');
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-        // Show message
-        contactMessage.textContent = 'Please fill in all the input fields 📩';
-    } else {
-        // serviceID - templateID - #form - publicKey
-        emailjs.sendForm('service_7ocfbtu', 'template_5z1m3h9', '#contact-form', 'user_2X6bXqX4nO2u6y0k3Tt8H')
+        if (
+            contactName.value.trim() === '' ||
+            contactEmail.value.trim() === '' ||
+            contactPhone.value.trim() === '' ||
+            contactMessageInput.value.trim() === ''
+        ) {
+            feedbackMsg.classList.remove('color-blue');
+            feedbackMsg.classList.add('color-red');
+            feedbackMsg.textContent = 'يرجى ملء جميع الحقول 📩';
+            setTimeout(() => { feedbackMsg.textContent = ''; }, 5000);
+            return;
+        }
+
+        // إرسال عبر EmailJS
+        // service_7ocfbtu و template_5z1m3h9 استخدم ما يناسب حسابك
+        emailjs.sendForm('service_7ocfbtu', 'template_5z1m3h9', contactForm)
             .then(() => {
-                contactMessage.classList.add('color-blue');
-                contactMessage.classList.remove('color-red');
+                feedbackMsg.classList.add('color-blue');
+                feedbackMsg.classList.remove('color-red');
+                feedbackMsg.textContent = 'تم إرسال الرسالة بنجاح! 📩';
+                setTimeout(() => { feedbackMsg.textContent = ''; }, 5000);
 
-                // Show message
-                contactMessage.textContent = 'Message sent successfully! 📩';
+                // تفريغ الحقول بعد الإرسال
+                contactForm.reset();
             })
-            .catch((error) => {
-                contactMessage.classList.remove('color-blue');
-                contactMessage.classList.add('color-red');
-
-                // Show message
-                contactMessage.textContent = 'Failed to send message. Please try again later. 📩';
+            .catch((err) => {
+                console.error('EmailJS error:', err);
+                feedbackMsg.classList.remove('color-blue');
+                feedbackMsg.classList.add('color-red');
+                feedbackMsg.textContent = 'فشل في إرسال الرسالة. حاول مرة أخرى لاحقاً 📩';
+                setTimeout(() => { feedbackMsg.textContent = ''; }, 5000);
             });
-    }
-    // Remove message after five seconds
-    setTimeout(() => {
-        contactMessage.textContent = '';
-    }, 5000);
+    };
 
-    // Clear input fields
-    contactName.value = '';
-    contactEmail.value = '';
-    contactProject.value = '';
+    contactForm.addEventListener('submit', sendEmail);
 }
 
-contactForm.addEventListener('submit', sendEmail);
+// Scroll Reveal Animation
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true
+});
+
+sr.reveal('.home-data, .home-img, .about-data, .about-img, .services-content, .menu-content, .app-data, .app-img, .contact-data, .contact-button, .footer-content', {interval: 200})
+sr.reveal('.skills-content:nth-child(1), .work-img, .testimonials-container, .footer-info', {origin: 'left'})
+sr.reveal('.skills-content:nth-child(2), .work-content, .testimonials-container, .footer-info', {origin: 'right'})
