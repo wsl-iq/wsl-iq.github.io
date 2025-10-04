@@ -1,32 +1,44 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
-@import url('https://unpkg.com/swiper@11/swiper-bundle.min.css');
-
-@font-face {
-    font-family: 'ArabicFont';
-    src: url('./fonts/arabic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+:root{
+  --font-sans: "Tajawal", "Cairo", "Noto Sans Arabic", system-ui, "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-serif: "Amiri", "Times New Roman", Times, serif;
 }
 
-.ar-text,
-:lang(ar),
-[dir="rtl"] {
-    font-family: 'ArabicFont', 'Poppins', sans-serif;
-    direction: rtl;
-    text-align: right;
-    line-height: 1.6;
+html, body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.ar-text h1,
-.ar-text h2,
-.ar-text h3,
-:lang(ar) h1,
-:lang(ar) h2,
-:lang(ar) h3 {
-    font-family: 'ArabicFont', 'Poppins', sans-serif;
-    font-weight: 600;
+h1, .heading {
+  font-family: "Cairo", var(--font-sans);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
 }
+
+h2, .subtitle {
+  font-family: "Tajawal", var(--font-sans);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: #fffefe;
+}
+
+.article {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
 
 :root {
     --hue-color: 242;
