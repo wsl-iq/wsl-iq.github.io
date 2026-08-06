@@ -151,10 +151,6 @@ if(navClose) {
     })
 }
 
-
-
-
-
 sr.reveal('.home-data, .home-img, .about-data, .about-img, .services-content, .menu-content, .app-data, .app-img, .contact-data, .contact-button, .footer-content', {interval: 200})
 sr.reveal('.skills-content:nth-child(1), .work-img, .testimonials-container, .footer-info', {origin: 'left'})
 sr.reveal('.skills-content:nth-child(2), .work-content, .testimonials-container, .footer-info', {origin: 'right'})
