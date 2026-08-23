@@ -1497,3 +1497,15 @@ footer {
     height: auto !important;
     object-fit: contain;
 }
+
+.arabic {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.ltr {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
