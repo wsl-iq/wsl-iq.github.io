@@ -20,6 +20,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
+    <style>
+        .phonetics-visual {
+            padding: 1rem;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, .14), rgba(14, 165, 233, .1));
+            overflow-x: auto;
+        }
+        .phonetics-table {
+            width: 100%;
+            min-width: 420px;
+            border-collapse: collapse;
+            direction: ltr;
+            text-align: center;
+        }
+        .phonetics-table th, .phonetics-table td {
+            padding: .55rem .7rem;
+            border-bottom: 1px solid rgba(148, 163, 184, .25);
+        }
+        .phonetics-table th { color: #6366f1; }
+        .phonetics-table td:first-child { font-weight: 700; }
+        .phonetics-sounds {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            margin-top: 1rem;
+            direction: ltr;
+        }
+        .phonetics-sounds span {
+            padding: .35rem .65rem;
+            border-radius: 999px;
+            background: rgba(99, 102, 241, .16);
+            font-family: Inter, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -781,6 +815,52 @@
                     </div>
                 </div>
                 
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>تعلم نطق اللغة الإنجليزية</h3>
+                        <div class="project-badges" dir="ltr">
+                            <span class="badge">English Learning</span>
+                            <span class="badge">IPA</span>
+                            <span class="badge">Education</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        تطبيق تعليمي تفاعلي لتحسين النطق والمفردات وفهم الرموز الصوتية الدولية (IPA) بطريقة واضحة وعملية.
+                    </p>
+                    <ul class="project-features">
+                        <li>نطق تلقائي واضح ومدرّب للكلمات</li>
+                        <li>قاموس صوتي للحروف المتحركة والساكنة</li>
+                        <li>وضع تدريب ووضع اختبار لتقييم التقدم</li>
+                        <li>تعلم المفردات خطوة بخطوة مع النطق الصوتي</li>
+                        <li>واجهة بسيطة مناسبة للمبتدئين</li>
+                    </ul>
+                    <div class="phonetics-visual">
+                        <table class="phonetics-table" aria-label="أمثلة على الكتابة الصوتية">
+                            <thead>
+                                <tr><th>Word</th><th>IPA</th><th>المعنى</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Hello</td><td>/həˈloʊ/</td><td>مرحبا</td></tr>
+                                <tr><td>World</td><td>/wɜːrld/</td><td>عالم</td></tr>
+                                <tr><td>Apple</td><td>/ˈæpəl/</td><td>تفاحة</td></tr>
+                                <tr><td>Book</td><td>/bʊk/</td><td>كتاب</td></tr>
+                                <tr><td>Water</td><td>/ˈwɔːtər/</td><td>ماء</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="phonetics-sounds">
+                            <span>f / v</span><span>s / z</span><span>ʃ / tʃ</span><span>ə / ɪ</span>
+                        </div>
+                    </div>
+                    <div class="project-links" dir="ltr">
+                        <a href="https://github.com/wsl-iq/Learning-pronunciation" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://wsl-iq.github.io/Learning-pronunciation/" class="project-link view-project">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
                 <!-- ISTP Project -->
                 <div class="project-card">
                     <div class="project-header">
@@ -829,6 +909,8 @@
                             <i class="fas fa-external-link-alt"></i> View Project
                         </a>
                     </div>
+
+                    
                 </div>
             </div>
         </div>
