@@ -1,406 +1,1035 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Al-Baqer</title>
+    <title>Mohammed Al-Baqer | Software Developer</title>
+    <meta name="description" content="Mohammed Al-Baqer is an independent software developer focused on desktop applications, web applications, developer tools, GUI, CLI and UX/UI.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mohammed Al-Baqer | Software Developer">
+    <meta property="og:description" content="Independent software developer focused on desktop applications, web applications, developer tools, GUI, CLI and UX/UI.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <div class="cursor" id="cursor"></div>
-
-    <!-- TICKER -->
-    <div class="ticker">
-    <div class="ticker-inner">
-        <span class="ticker-word pink ltr">I'M</span>
-        <span class="ticker-word yellow ltr">Mohammed Al-Baqer</span>
-        <span class="ticker-word cream ltr">Software</span>
-        <span class="ticker-word pink ltr">Developer</span>
-        <span class="ticker-word yellow ltr">GUI</span>
-        <span class="ticker-word cream ltr">CLI</span>
-        <span class="ticker-word pink ltr">UX-UI</span>
-        <span class="ticker-sep">✦</span>
-        <span class="ticker-word yellow ltr">I'M</span>
-        <span class="ticker-word pink ltr">Mohammed Al-Baqer</span>
-        <span class="ticker-word cream ltr">Software</span>
-        <span class="ticker-word yellow ltr">Developer</span>
-        <span class="ticker-word pink ltr">GUI</span>
-        <span class="ticker-word cream ltr">CLI</span>
-        <span class="ticker-word yellow ltr">UX-UI</span>
-        <span class="ticker-sep">✦</span>
-        <span class="ticker-word pink ltr">I'M</span>
-        <span class="ticker-word yellow ltr">Mohammed Al-Baqer</span>
-        <span class="ticker-word cream ltr">Software</span>
-        <span class="ticker-word pink ltr">Developer</span>
-        <span class="ticker-word yellow ltr">GUI</span>
-        <span class="ticker-word cream ltr">CLI</span>
-        <span class="ticker-word pink ltr">UX-UI</span>
-        <span class="ticker-sep">✦</span>
-        <span class="ticker-word yellow ltr">I'M</span>
-        <span class="ticker-word pink ltr">Mohammed Al-Baqer</span>
-        <span class="ticker-word cream ltr">Software</span>
-        <span class="ticker-word yellow ltr">Developer</span>
-        <span class="ticker-word pink ltr">GUI</span>
-        <span class="ticker-word cream ltr">CLI</span>
-        <span class="ticker-word yellow ltr">UX-UI</span>
-        <span class="ticker-sep">✦</span>
-    </div>
-    </div>
-
-    <!-- NAV -->
-    <nav>
-    <a href="#" class="nav-logo ltr">Mohammed Al-Baqer</a>
-    <ul class="nav-links">
-        <li><a href="#shakes" class="arabic">مشاريعي</a></li>
-        <li><a href="#fresh" class="arabic">مهاراتي</a></li>
-        <li><a href="https://www.instagram.com/g6xs0r/" class="cart-link arabic">من أنا؟ <i class="fa-solid fa-user"></i></a></li>
-    </ul>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-    <div class="hero-blob"></div>
-    <div class="hero-blob2"></div>
-
-    <div class="hero-text">
-        <div class="hero-eyebrow">
-        <div class="dot"></div>
-        <span class="arabic">متواجد فقط أيام العطل</span>
-        </div>
-        <h1 class="hero-h1">
-        <span class="pink arabic">مطور</span><br>
-        <span class="arabic">برمجيات</span><br>
-        <span class="yellow arabic">مستقل</span>
-        </h1>
-        <p class="hero-sub arabic">أبني برامج أدوات وواجهات رقمية تركّز على الفكرة الأداء وتجربة الاستخدام — من سطر الأوامر إلى الواجهة التي يراها المستخدم.</p>
-
-        <div class="hero-pills">
-        <div class="hero-pill active ltr">GUI</div>
-        <div class="hero-pill ltr">CLI</div>
-        <div class="hero-pill ltr">UX·UI</div>
-        <div class="hero-pill ltr">Desktop Application</div>
-        <div class="hero-pill ltr">Mobile Application</div>
-        <div class="hero-pill ltr">Web Application</div>
-        </div>
-
-        <div class="hero-btns">
-        <a href="#shakes" class="btn-hero-primary arabic">↓ أطلع على مشاريعي</a>
-        <a href="#fresh" class="btn-hero-secondary arabic">ماهي مهاراتي؟</a>
-        </div>
-
-        <div class="hero-mini-stats">
-        <div class="hms-chip">
-            <div>
-            <div class="hms-val arabic">+سنوات 7</div>
-            <div class="hms-lbl arabic">الخبرة</div>
-            </div>
-        </div>
-        <div class="hms-chip">
-            <div>
-            <div class="hms-val ltr">100%</div>
-            <div class="hms-lbl arabic">المصداقية</div>
-            </div>
-        </div>
-        <div class="hms-chip">
-            <div>
-            <div class="hms-val ltr">4.9 ★</div>
-            <div class="hms-lbl arabic">تقييم العملاء</div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="hero-img-wrap">
-        <div class="hero-img-ring">
-        <img src="icon/icon.png" alt="Shake" id="heroShakeImg">
-        </div>
-        <div class="hero-badge arabic">مهاراتي</div>
-    </div>
-    </section>
-
-    <!-- STATS -->
-    <div class="stats-strip">
-    <div class="stat">
-        <div class="stat-num ltr">3</div>
-        <div class="stat-label arabic">المجالات الرئيسية</div>
-    </div>
-    <div class="stat">
-        <div class="stat-num ltr">100%</div>
-        <div class="stat-label arabic">متابعة العميل</div>
-    </div>
-    <div class="stat">
-        <div class="stat-num ltr">30+</div>
-        <div class="stat-label arabic">مشروع وتجربة برمجية</div>
-    </div>
-    <div class="stat">
-        <div class="stat-num ltr">∞</div>
-        <div class="stat-label arabic">فضول للتعلم والبناء</div>
-    </div>
-    </div>
-
-    <!-- SLIDER -->
-    <section class="slider-section" id="shakes">
-    <div class="section-header">
-        <h2 class="arabic">مشاريعي<br><em>البرمجية</em></h2>
-        <p class="arabic">جزء من أعمالي وتجارب البرمجة المفتوحة على القائمة مصممة حتى تتوسع تلقائياً مع المشاريع الجديدة</p>
-    </div>
-
-    <div class="slider-viewport" id="sliderViewport">
-        <div class="slider-track" id="sliderTrack">
-        <div class="shake-card card-coconut">
-            <span class="card-chip">01</span>
-            <img src="icon/Taeafi.png" alt="Coconut" class="card-img">
-            <div class="card-bottom">
-            <div class="card-name arabic">تعافي</div>
-            <div class="card-desc arabic">تطبيق تعافي للتعافي من العادات الضارة، يوفر التوعية، عداد التعافي، المسبحة الرقمية، والمحتوى الروحي، مع حفظ البيانات محليًا دون خوادم أو تتبع أو حسابات.</div>
-            <div class="card-footer">
-                <div class="card-price arabic">الصحة</div>
-                <a href="https://github.com/wsl-iq/teaafi" class="card-btn ltr" target="_blank" rel="noopener noreferrer">زيارة</a>
-                
-            </div>
-            </div>
-        </div>
-        <div class="shake-card card-blueberry">
-            <span class="card-chip">02</span>
-            <img src="icon/PyExe.png" alt="Blueberry" class="card-img">
-            <div class="card-bottom">
-            <div class="card-name ltr">Python-Executable</div>
-            <div class="card-desc arabic">استخدامهما كطبقة منخفضة المستوى من حيث الأداء الأمثل وتمثل بديلاً كثيفًا لمصادر الاستهلاك في النظام خاصًا ضمن البرامج التي تتطلب أداءً عاليًا</div>
-            <div class="card-footer">
-                <div class="card-price arabic">الحماية</div>
-                <a href="https://github.com/wsl-iq/Python-Executable" class="card-btn ltr" target="_blank" rel="noopener noreferrer">زيارة</a>
-            </div>
-            </div>
-        </div>
-        <div class="shake-card card-banana">
-            <span class="card-chip">03</span>
-            <img src="icon/pydbg.png" alt="Banana" class="card-img">
-            <div class="card-bottom">
-            <div class="card-name ltr">pydbg</div>
-            <div class="card-desc arabic">تطوير تطبيقات سطح المكتب تطبيقات الويب تطبيقات الهاتف والمواقع التفاعلية باستخدام تقنيات الويب الحديثة</div>
-            <div class="card-footer">
-                <div class="card-price arabic">التحليل</div>
-                <a href="https://github.com/wsl-iq/Pydbg" class="card-btn ltr" target="_blank" rel="noopener noreferrer">زيارة</a>
-            </div>
-            </div>
-        </div>
-        <div class="shake-card card-grapefruit">
-            <span class="card-chip">04</span>
-            <img src="icon/ISTP.png" alt="Grapefruit" class="card-img">
-            <div class="card-bottom">
-            <div class="card-name ltr">ISTP</div>
-            <div class="card-desc arabic">كتابة السكربتات وأتمتة المهام وتنفيذ أوامر وإجراءات نظام لينكس بالإضافة إلى إنشاء البرامج والملفات التنفيذية وأدوات النظام</div>
-            <div class="card-footer">
-                <div class="card-price arabic">الشبكات</div>
-                <a href="https://github.com/wsl-iq/ISTP" class="card-btn ltr" target="_blank" rel="noopener noreferrer">زيارة</a>
-            </div>
-            </div>
-        </div>
-        <div class="shake-card card-strawberry">
-            <span class="card-chip">05</span>
-            <img src="icon/Bios.png" alt="Strawberry" class="card-img">
-            <div class="card-bottom">
-            <div class="card-name ltr">BIOS-UEFI</div>
-            <div class="card-desc arabic">إدارة إصدارات المشاريع البرمجية تتبع التغييرات إدارة الفروع تنظيم التطوير والتعامل مع مستودعات المشاريع البرمجية</div>
-            <div class="card-footer">
-                <div class="card-price arabic">أدارة النظام</div>
-                <a href="https://github.com/wsl-iq/BIOS-UEFI" class="card-btn ltr" target="_blank" rel="noopener noreferrer">زيارة</a>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="slider-controls">
-        <button class="ctrl-btn" id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="ctrl-btn" id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
-        <div class="slider-dots" id="sliderDots"></div>
-    </div>
-    </section>
-
-    <!-- INGREDIENTS -->
-    <section class="ingredients-section" id="fresh">
-    <div class="section-header" style="max-width:1000px;margin:0 auto;">
-        <h2 class="arabic" dir="rtl">مهاراتي<br><em>البرمجية</em></h2>
-        <p></p>
-    </div>
-
-    <div class="ingredients-grid">
-        <div class="ing-card c1">
-        <div class="ing-img-wrap"><img src="icon/python.png" class="ing-img" alt="python"></div>
-        <div class="ing-num ltr">01 —</div>
-        <div class="ing-name ltr">python</div>
-        <div class="ing-desc arabic">تطوير واجهات المستخدم الرسومية وواجهات سطر الأوامر لسطح المكتب بالإضافة إلى بناء مشاريع صغيرة ومتوسطة</div>
-        </div>
-        <div class="ing-card c2">
-        <div class="ing-img-wrap"><img src="icon/Cpp.png" class="ing-img" alt="CPP"></div>
-        <div class="ing-num ltr">02 —</div>
-        <div class="ing-name ltr">C/C++</div>
-        <div class="ing-desc arabic">استخدام المستوى المصغر لتحسين أداء التحسين الخاص بأمور المعاملات والهام التي تستهلك النظام</div>
-        </div>
-        <div class="ing-card c3">
-        <div class="ing-img-wrap"><img src="icon/JavaScript.png" class="ing-img" alt="JavaScript"></div>
-        <div class="ing-num ltr">03 —</div>
-        <div class="ing-name ltr">JavaScript</div>
-        <div class="ing-desc arabic">تطوير تطبيقات الويب المواقع التفاعلية تطبيقات سطح المكتب وتطبيقات الهاتف</div>
-        </div>
-        <div class="ing-card c4">
-        <div class="ing-img-wrap"><img src="icon/Bash-Script.png" class="ing-img" alt="Bash"></div>
-        <div class="ing-num ltr">04 —</div>
-        <div class="ing-name ltr">Bash Script / Shell</div>
-        <div class="ing-desc arabic">كتابة السكربتات تتطلب أوامر وأنظمة لينكس المتخصصة في البداية للأدوات المبتدئة</div>
-        </div>
-        <div class="ing-card c5">
-        <div class="ing-img-wrap"><img src="icon/Git.png" class="ing-img" alt="Git"></div>
-        <div class="ing-num ltr">05 —</div>
-        <div class="ing-name ltr">Git</div>
-        <div class="ing-desc arabic">إدارة إصدارات المشاريع الفروع التغييرات والمستودعات البرمجية</div>
-        </div>
-        <div class="ing-card c6" style="display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding-top:36px;">
-        <div class="arabic" style="font-family:'Permanent Marker',cursive;font-size:1.3rem;color:var(--cream);margin-bottom:12px;">تابع مشاريعي هنا</div>
-        <a href="https://github.com/wsl-iq?tab=repositories" class="ltr" style="color:var(--hot-pink);font-size:0.72rem;letter-spacing:0.15em;text-decoration:none;text-transform:uppercase;border-bottom:1px solid var(--hot-pink);padding-bottom:2px;">To Go GitHub →</a>
-        </div>
-    </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-    <div class="newsletter-inner">
-        <div class="nl-left">
-        <div class="nl-tag arabic">تواصل معي</div>
-        <h2 class="arabic">أحصل على<br>خصم<br>لمشروعك</h2>
-        <div class="nl-proof">
-            <div class="nl-avatars">
-            <!-- Fixed avatars: clean CSS circles with initials, no broken emojis -->
-            <div class="nl-avatar av1 ltr">M</div>
-            <div class="nl-avatar av2 ltr">O</div>
-            <div class="nl-avatar av3 ltr">H</div>
-            <div class="nl-avatar av4 ltr">A</div>
-            <div class="nl-anatar av5 ltr">H</div>
-            <div class="nl-anatar av6 ltr">A</div>
-            <div class="nl-anatar av7 ltr">M</div>
-            <div class="nl-anatar av8 ltr">M</div>
-            <div class="nl-anatar av9 ltr">A</div>
-            <div class="nl-anatar av10 ltr">D</div>
-            <div class="nl-anatar av11 ltr">A</div>
-            <div class="nl-anatar av12 ltr">L</div>
-            <div class="nl-anatar av13 ltr">B</div>
-            <div class="nl-anatar av14 ltr">Q</div>
-            <div class="nl-anatar av15 ltr">E</div>
-            <div class="nl-anatar av16 ltr">R</div>
-            </div>
-            <div class="nl-proof-text">
-            <strong class="arabic">25+ مشروع منجز لعملاء</strong>
-            <span class="arabic">جرب لاتتردد</span>
-            </div>
-        </div>
-        </div>
-        <div class="nl-right">
-        <div class="nl-perks">
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
-            <span class="arabic">35% خصم فوري على طلبك الأول</span>
-            </div>
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-solid fa-fire" aria-hidden="true"></i></div>
-            <span class="arabic">إمكانية متابعة مشروعك بعد التسليم وأطلاق أصدارات والتحديثات  وتصحيح الأخطاء مجاناً</span>
-            </div>
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></div>
-            <span class="arabic">وصف مشروعك بدقة مع التفاصيل المهمة قبل التطوير</span>
-            </div>
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
-            <span class="arabic">أفهم المشكلة والهدف قبل كتابة أول سطر كود</span>
-            </div>
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
-            <span class="arabic">أرتب تجربة الاستخدام والواجهة والمنطق</span>
-            </div>
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-            <span class="arabic">أحوّل التصميم إلى برنامج فعلي قابل للاستخدام</span>
-            </div>
-            <div class="nl-perk">
-            <div class="nl-perk-icon"><i class="fa-solid fa-check-double" aria-hidden="true"></i></div>
-            <span class="arabic">اختبار، تحسين، إصلاح التفاصيل وتسليم نظيف</span>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon" dir="ltr">&lt;/&gt;</span>
+                <span class="logo-text" dir="ltr">Mohammed Al-Baqer</span>
             </div>
             
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link">عني</a></li>
+                    <li><a href="#skills" class="nav-link">المهارات</a></li>
+                    <li><a href="#journey" class="nav-link">المسيرة</a></li>
+                    <li><a href="#projects" class="nav-link">المشاريع</a></li>
+                    <li><a href="#services" class="nav-link">الخدمات</a></li>
+                    <li><a href="#contact" class="nav-link">التواصل</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#contact" class="btn-primary nav-cta">اطلب مشروعًا</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nl-form">
-            <a class="nl-btn ltr" href="https://www.instagram.com/g6xs0r/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram ↗</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" dir="ltr">✦ I'M Mohammed Al-Baqer — Software Developer — GUI · CLI · UX/UI ✦</div>
+                
+                <h1 class="hero-title">محمد الباقر</h1>
+                <h2 class="hero-subtitle">مطور برمجيات مستقل</h2>
+                
+                <p class="hero-description">
+                    أنا مطور برمجيات أهتم ببناء البرامج والأدوات الرقمية وتصميم الواجهات التي تجعل التقنية أسهل وأوضح للمستخدم.
+                </p>
+                <p class="hero-description-secondary">
+                    أتنقل بين <span dir="ltr">Python</span> و <span dir="ltr">JavaScript</span> و <span dir="ltr">C/C++</span> وبين تطبيقات سطح المكتب وأدوات <span dir="ltr">GUI</span> و<span dir="ltr">CLI</span> وتجارب الويب.
+                    أبني برامج وأدوات وواجهات رقمية تركّز على الفكرة، الأداء، وتجربة الاستخدام — من سطر الأوامر إلى الواجهة التي يراها المستخدم.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">استكشف مشاريعي</a>
+                    <a href="#contact" class="btn-secondary">اطلب مشروعًا</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="dashboard-card">
+                    <div class="dashboard-header">
+                        <div class="window-controls">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="dashboard-title" dir="ltr">Developer Dashboard</span>
+                    </div>
+                    
+                    <div class="dashboard-body">
+                        <div class="tech-chips" dir="ltr">
+                            <span class="chip">Python</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">C/C++</span>
+                            <span class="chip">GUI</span>
+                            <span class="chip">CLI</span>
+                            <span class="chip">Web</span>
+                            <span class="chip">Desktop</span>
+                            <span class="chip">Mobile</span>
+                        </div>
+                        
+                        <div class="mini-chart-container">
+                            <canvas id="heroLineChart" height="80"></canvas>
+                        </div>
+                        
+                        <div class="mini-stats" dir="ltr">
+                            <div class="mini-stat">
+                                <div class="circular-progress" data-percent="90" style="--progress: 324deg;">
+                                    <span>90%</span>
+                                </div>
+                                <label>Python</label>
+                            </div>
+                            <div class="mini-stat">
+                                <div class="circular-progress" data-percent="70" style="--progress: 252deg;">
+                                    <span>70%</span>
+                                </div>
+                                <label>JavaScript</label>
+                            </div>
+                            <div class="mini-stat">
+                                <div class="circular-progress" data-percent="55" style="--progress: 198deg;">
+                                    <span>55%</span>
+                                </div>
+                                <label>C/C++</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-bar-chart" dir="ltr">
+                            <div class="bar-item">
+                                <label>Bash/Shell</label>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 80%;"></div>
+                                </div>
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
     </section>
 
-    <!-- LIFESTYLE -->
-    <section class="lifestyle">
-    <div class="lifestyle-inner">
-        <div class="lifestyle-img-wrap">
-        <div class="lifestyle-img-frame">
-            <img src="icon/Mohammed Al-Baqer.png" alt="Shake lifestyle">
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">عني</h2>
+                <p class="section-subtitle">من أنا وما الذي أفعله</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        أنا محمد الباقر، مطور برمجيات مستقل شغوف ببناء البرامج والأدوات الرقمية التي تحل مشاكل حقيقية.
+                        أؤمن أن البرمجة ليست مجرد كتابة أكواد، بل هي فن تحويل الأفكار إلى حلول عملية.
+                    </p>
+                    <p>
+                        على مدى السنوات الماضية، ركزت على تطوير مهاراتي في <span dir="ltr">Python</span> و <span dir="ltr">JavaScript</span> و <span dir="ltr">C/C++</span>،
+                        وبنيت مشاريع متنوعة تشمل تطبيقات سطح المكتب، أدوات المطورين، وتجارب الويب.
+                    </p>
+                    <p>
+                        أهتم بشكل خاص بتجربة المستخدم وجودة الكود، وأسعى دائمًا لبناء برامج وأدوات تكون سهلة الاستخدام وفعالة في نفس الوقت.
+                    </p>
+                </div>
+                
+                <div class="about-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-number" data-target="30" dir="ltr">0</div>
+                        <div class="stat-label">مشروع وتجربة برمجية</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-number" dir="ltr">4.4</div>
+                        <div class="stat-label">تقييم العملاء</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-number" data-target="7" dir="ltr">0</div>
+                        <div class="stat-label">سنوات من التعلم والتطوير</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="ls-badge arabic">اطلب الآن</div>
-        </div>
-        <div class="lifestyle-content">
-        <div class="ls-kicker arabic">من لفكرة إلىٰ التنفيذ</div>
-        <h2 class="ls-title arabic">دقة<br>مرونة<br>إداء أفضل</h2>
-        <p class="ls-copy arabic">
-            أنا مطور برمجيات أهتم ببناء البرامج والأدوات الرقمية وتصميم الواجهات التي تجعل التقنية أسهل وأوضح للمستخدم<br>
-            أتنقل بين <span class="ltr">Python</span> و <span class="ltr">JavaScript</span> و <span class="ltr">C/C++</span> وبين تطبيقات سطح المكتب وأدوات <span class="ltr">GUI - CLI</span> وتجارب الويب<br>
-            أبني برامج وأدوات وواجهات رقمية تركّز على الفكرة، الأداء، وتجربة الاستخدام — من سطر الأوامر إلى الواجهة التي يراها المستخدم
-        </p>
-        <ul class="ls-features">
-            <li class="arabic">
-            <div class="ls-dot"></div><strong>تطوير المواقع</strong> — تجارب الويب سريعة، متكاملة وبنية حول تجربة المستخدم
-            </li>
-            <li class="arabic">
-            <div class="ls-dot"></div><strong>تطوير البرامج</strong> — تطبيقات سطح مكتب وأدوات عملية تخدم حاجة واضحة
-            </li>
-            <li class="arabic">
-            <div class="ls-dot"></div><strong>أدوات المطورين</strong> — تساعد واجهة سطر الأوامر والأتمتة في تقصير الخطوات البسيطة
-            </li>
-        </ul>
-        <div class="ls-btns">
-            <a href="#shakes" class="ls-btn-p arabic">مشاريعي</a>
-            <a href="#fresh" class="ls-btn-s arabic">مهاراتي</a>
-        </div>
-        </div>
-    </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-    <div class="footer-inner">
-
-        <!-- Logo + role label -->
-        <div class="footer-logo-wrap">
-        <a href="#" class="footer-logo-text ltr">Mohammed Al-Baqer</a>
-        <span class="footer-dev-label ltr">Software Developer &amp; Passionate about Gaming</span>
+    <!-- Developer Statistics Section -->
+    <section class="statistics">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">الإحصائيات</h2>
+                <p class="section-subtitle">نظرة على مسيرتي البرمجية</p>
+            </div>
+            
+            <div class="statistics-grid">
+                <div class="statistics-card">
+                    <h3>سنوات التعلم والتطوير</h3>
+                    <div class="big-number" dir="ltr">+7</div>
+                    <p>سنوات من التعلم المستمر والتطوير الذاتي</p>
+                </div>
+                
+                <div class="statistics-card">
+                    <h3>المشاريع والتجارب</h3>
+                    <div class="big-number" dir="ltr">30+</div>
+                    <p>مشروع وتجربة برمجية متنوعة</p>
+                </div>
+                
+                <div class="statistics-card">
+                    <h3>تقييم العملاء</h3>
+                    <div class="big-number" dir="ltr">4.4★</div>
+                    <p>تقييم إيجابي من العملاء</p>
+                </div>
+                
+                <div class="statistics-card">
+                    <h3>المهارات الرئيسية</h3>
+                    <div class="skills-donut-container">
+                        <div class="donut-chart">
+                            <div class="donut-center">
+                                <span class="donut-value">4</span>
+                                <span class="donut-label">لغات</span>
+                            </div>
+                            <div class="donut-segment segment-1"></div>
+                            <div class="donut-segment segment-2"></div>
+                            <div class="donut-segment segment-3"></div>
+                            <div class="donut-segment segment-4"></div>
+                        </div>
+                        <div class="donut-legend" dir="ltr">
+                            <span><i style="background:#00d4ff"></i>Python 90%</span>
+                            <span><i style="background:#8b5cf6"></i>JavaScript 70%</span>
+                            <span><i style="background:#f59e0b"></i>C/C++ 55%</span>
+                            <span><i style="background:#10b981"></i>Bash 80%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Legal links + year -->
-        <div class="footer-links">
-        <a href="#" class="ltr">Copyright © 2026, lnc. Mohammed Al-Baqer. All rights reserved.</a>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">ماذا أطور؟</h2>
+                <p class="section-subtitle">الخدمات التي أقدمها</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>تطوير المواقع</h3>
+                    <p>تجارب ويب سريعة، متكاملة ومبنية حول تجربة المستخدم.</p>
+                    <div class="service-tech" dir="ltr">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>تطوير البرامج</h3>
+                    <p>تطبيقات سطح مكتب وأدوات عملية تخدم حاجة واضحة.</p>
+                    <div class="service-tech" dir="ltr">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">GUI</span>
+                        <span class="tech-tag">Desktop</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>أدوات المطورين</h3>
+                    <p>أدوات GUI وCLI والأتمتة تساعد على تقليل الخطوات المتكررة وتسهيل العمل.</p>
+                    <div class="service-tech" dir="ltr">
+                        <span class="tech-tag">CLI</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">Tools</span>
+                        <span class="tech-tag">Tweaks</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Visible contact buttons: Instagram + GitHub only -->
-        <div class="footer-contact">
-        <a href="#" class="footer-contact-btn btn-instagram ltr" title="Instagram" target="_blank" rel="noopener">
-            <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-        </a>
-        <a href="#" class="footer-contact-btn btn-github ltr" title="GitHub" target="_blank" rel="noopener">
-            <i class="fab fa-github" aria-hidden="true"></i> GitHub
-        </a>
+    <!-- Software Development Types -->
+    <section class="dev-types">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" dir="ltr">Software Development</h2>
+                <p class="section-subtitle">أنواع التطبيقات التي أطورها</p>
+            </div>
+            
+            <div class="dev-types-grid">
+                <div class="dev-type-card">
+                    <div class="dev-type-icon">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3 dir="ltr">Desktop Application</h3>
+                    <p>تطبيقات سطح المكتب</p>
+                    <div class="mockup-window">
+                        <div class="mockup-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="mockup-body">
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line short"></div>
+                            <div class="mockup-line"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dev-type-card">
+                    <div class="dev-type-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 dir="ltr">Mobile Application</h3>
+                    <p>تطبيقات الهاتف</p>
+                    <div class="mockup-phone">
+                        <div class="phone-screen">
+                            <div class="phone-line"></div>
+                            <div class="phone-line short"></div>
+                            <div class="phone-line"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dev-type-card">
+                    <div class="dev-type-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 dir="ltr">Web Application</h3>
+                    <p>تطبيقات الويب</p>
+                    <div class="mockup-browser">
+                        <div class="browser-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <div class="url-bar"></div>
+                        </div>
+                        <div class="browser-body">
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                            <div class="browser-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- GUI/CLI/UX Section -->
+    <section class="interfaces">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">أطور واجهات</h2>
+                <p class="section-subtitle">ثلاث طرق مختلفة للتفاعل مع البرامج</p>
+            </div>
+            
+            <div class="interfaces-grid">
+                <div class="interface-card gui-card">
+                    <div class="interface-header">
+                        <h3 dir="ltr">Graphical User Interface</h3>
+                        <span class="interface-badge" dir="ltr">GUI</span>
+                    </div>
+                    <div class="gui-window">
+                        <div class="window-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="window-title" dir="ltr">Application</span>
+                        </div>
+                        <div class="window-content">
+                            <div class="content-sidebar"></div>
+                            <div class="content-main">
+                                <div class="content-line"></div>
+                                <div class="content-line short"></div>
+                                <div class="content-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card cli-card">
+                    <div class="interface-header">
+                        <h3 dir="ltr">Command Line Interface</h3>
+                        <span class="interface-badge" dir="ltr">CLI</span>
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-title" dir="ltr">Terminal</span>
+                        </div>
+                        <div class="terminal-body" dir="ltr">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">python app.py</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output">Running application...</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="output success">✓ Connected successfully</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="cursor">▋</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interface-card ux-card">
+                    <div class="interface-header">
+                        <h3 dir="ltr">User Experience & Interface</h3>
+                        <span class="interface-badge" dir="ltr">UX/UI</span>
+                    </div>
+                    <div class="wireframe">
+                        <div class="wireframe-header">
+                            <div class="wireframe-nav"></div>
+                        </div>
+                        <div class="wireframe-body">
+                            <div class="wireframe-sidebar"></div>
+                            <div class="wireframe-main">
+                                <div class="wireframe-block"></div>
+                                <div class="wireframe-block small"></div>
+                                <div class="wireframe-grid">
+                                    <div class="wireframe-item"></div>
+                                    <div class="wireframe-item"></div>
+                                    <div class="wireframe-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Dashboard -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">المهارات</h2>
+                <p class="section-subtitle">لوحة المهارات والخبرات التقنية</p>
+            </div>
+            
+            <div class="skills-dashboard">
+                <div class="skills-chart">
+                    <h3>توزيع المهارات</h3>
+                    <canvas id="skillsRadar" width="400" height="400"></canvas>
+                    <div class="radar-labels" dir="ltr">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>C/C++</span>
+                        <span>Bash</span>
+                        <span>GUI</span>
+                        <span>CLI</span>
+                    </div>
+                </div>
+                
+                <div class="skills-progress">
+                    <h3>مستوى الخبرة التقريبي</h3>
+                    <p class="skills-note">هذه النسب تمثل مستوى الخبرة التقريبي الشخصي وليست شهادات رسمية.</p>
+                    
+                    <div class="progress-items" dir="ltr">
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Python</span>
+                                <span class="progress-value">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%; background: #00d4ff;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>JavaScript</span>
+                                <span class="progress-value">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%; background: #8b5cf6;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Bash / Shell</span>
+                                <span class="progress-value">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%; background: #10b981;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>C/C++</span>
+                                <span class="progress-value">55%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 55%; background: #f59e0b;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline -->
+    <section class="journey" id="journey">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" dir="ltr">My Journey</h2>
+                <p class="section-subtitle" dir="ltr">2017 — 2026</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2017</h3>
+                        <p>كل شيء كان صعبًا. افتقرت إلى اللغة الإنجليزية والمحتوى المستهدف، وكان هناك الكثير من التشويش. بدأت باتباع الأساسيات.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2018</h3>
+                        <p>بدأت المسيرة ورسم الخطة بتعلم لغة Python مع المتابعة، وبدأت بتنفيذ مشاريع شخصية بسيطة.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2019</h3>
+                        <p>متابعة الكورسات وتنفيذ المشاريع المطلوبة باسم Home Work لتطبيق ما تعلمته. تزامن ذلك مع تدهور الأوضاع في البلد وأحداث تشرين وانقطاع الإنترنت، مما أدى إلى انخفاض الشغف خلال رحلة التعلم.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2020</h3>
+                        <p>انهيار شبه كامل بسبب جائحة COVID-19 وتدهور الحالة الصحية خلال عدة أشهر، مما أدى إلى التشتت.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2021</h3>
+                        <p>عودة الأوضاع إلى طبيعتها مع شغف أكبر. تعلم مهارات جديدة وتنفيذ مشاريع بسيطة وسهلة وشبه متوسطة.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2022</h3>
+                        <p>توسع أكبر وتعلم HTML وCSS وJavaScript. ظهور وانتشار أدوات الذكاء الاصطناعي ساعد على زيادة التعلم وتقليل بعض الصعوبات.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2023</h3>
+                        <p>تنفيذ مشاريع متوسطة. الاستفادة من تطور الذكاء الاصطناعي لزيادة التعلم. التعلم من الأخطاء وتسجيل المشاكل وطرق حلها.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2024</h3>
+                        <p>استمرار التعلم لفهم عالم البرمجة بشكل أكبر. البدء بفهم أساسيات لغات وتقنيات جديدة مثل C++.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2025</h3>
+                        <p>تنفيذ مشاريع متوسطة ومشاركتها عبر GitHub ومنصات مختلفة. تنفيذ مشاريع شبه ضخمة بالنسبة لمطور مستقل، شملت تطبيقات ويب وسطح مكتب وهواتف.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year" dir="ltr">2026</h3>
+                        <p>زيادة التركيز على التعلم وإنشاء مشاريع متعددة الاستخدام. الوصول إلى أكثر من 30 مشروعًا وتجربة برمجية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" dir="ltr">Featured Projects</h2>
+                <p class="section-subtitle">مشاريع مميزة قمت بتطويرها</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Taeafi Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Taeafi / تعافي</h3>
+                        <div class="project-badges" dir="ltr">
+                            <span class="badge">PWA</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">Privacy First</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        تطبيق ويب تقدمي (PWA) للتعافي من العادات الضارة.
+                    </p>
+                    <ul class="project-features">
+                        <li>تعليم العادات</li>
+                        <li>عداد تعافي مباشر</li>
+                        <li>تسبيح رقمي</li>
+                        <li>محتوى روحي</li>
+                        <li dir="ltr">Dark / Light Theme</li>
+                        <li dir="ltr">Privacy First - جميع البيانات تبقى على جهاز المستخدم</li>
+                    </ul>
+                    <div class="project-privacy">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>لا توجد خوادم • لا يوجد Tracking • لا يحتاج إلى Account</span>
+                    </div>
+                    <div class="project-visual">
+                        <div class="browser-mockup">
+                            <div class="browser-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <div class="url-bar" dir="ltr">taeafi.app</div>
+                            </div>
+                            <div class="browser-body">
+                                <div class="recovery-counter">
+                                    <div class="counter-display" dir="ltr">7 Days</div>
+                                    <div class="progress-ring"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links" dir="ltr">
+                        <a href="https://github.com/wsl-iq/Taeafi" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://wsl-iq.github.io/teaafi/" class="project-link view-project">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pydbg Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 dir="ltr">Pydbg</h3>
+                        <div class="project-badges" dir="ltr">
+                            <span class="badge">Python</span>
+                            <span class="badge">Open Source</span>
+                            <span class="badge">Developer Tool</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        أداة تحليل بسيطة مفتوحة المصدر مكتوبة بلغة Python لفحص ملفات Python المرتبطة.
+                    </p>
+                    <div class="file-types" dir="ltr">
+                        <span class="file-type">.pyc</span>
+                        <span class="file-type">.pyd</span>
+                        <span class="file-type">.pyz</span>
+                        <span class="file-type">ZIP</span>
+                    </div>
+                    <div class="project-visual">
+                        <div class="terminal-mockup">
+                            <div class="terminal-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="terminal-title" dir="ltr">pydbg</span>
+                            </div>
+                            <div class="terminal-body" dir="ltr">
+                                <div class="terminal-line">
+                                    <span class="prompt">$</span>
+                                    <span class="command">pydbg analyze file.pyc</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output">Analyzing file.pyc...</span>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="output success">✓ Analysis complete</span>
+                                </div>
+                                <div class="file-stats">
+                                    <span>Files: 3</span>
+                                    <span>Size: 2.4KB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links" dir="ltr">
+                        <a href="https://github.com/wsl-iq/Pydbg" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://wsl-iq.github.io/Pydbg/" class="project-link view-project">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Python To Executable Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 dir="ltr">From Python To Executable</h3>
+                        <div class="project-badges" dir="ltr">
+                            <span class="badge">Python</span>
+                            <span class="badge">PyInstaller</span>
+                            <span class="badge">GUI</span>
+                            <span class="badge">Windows</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        أداة رسومية تساعد المطورين على تحويل ملفات Python (.py) إلى ملفات تنفيذية (.exe) على Windows.
+                    </p>
+                    <p class="project-note">
+                        تعتمد على PyInstaller في الخلفية وتوفر واجهة رسومية لإدارة الملفات والمجلدات وخيارات البناء.
+                    </p>
+                    <div class="project-visual">
+                        <div class="build-progress" dir="ltr">
+                            <div class="build-header">
+                                <span>Building executable...</span>
+                                <span class="build-percent">75%</span>
+                            </div>
+                            <div class="build-bar">
+                                <div class="build-fill" style="width: 75%;"></div>
+                            </div>
+                            <div class="build-steps">
+                                <span class="step complete">✓ Collecting files</span>
+                                <span class="step complete">✓ Analyzing dependencies</span>
+                                <span class="step active">⏳ Building executable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links" dir="ltr">
+                        <a href="https://github.com/wsl-iq/Python-Executable" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://wsl-iq.github.io/Python-Executable/" class="project-link view-project">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ISTP Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 dir="ltr">ISTP</h3>
+                        <div class="project-badges" dir="ltr">
+                            <span class="badge">Internet Speed Test</span>
+                            <span class="badge">Network Tool</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Internet Speed Test Platform - أداة لاختبار سرعة الإنترنت وجودة الاتصال.
+                    </p>
+                    <div class="speed-test-visual" dir="ltr">
+                        <div class="speed-metrics">
+                            <div class="speed-item">
+                                <span class="speed-label">Download</span>
+                                <span class="speed-value">89.5 Mbps</span>
+                            </div>
+                            <div class="speed-item">
+                                <span class="speed-label">Upload</span>
+                                <span class="speed-value">42.3 Mbps</span>
+                            </div>
+                            <div class="speed-item">
+                                <span class="speed-label">Ping</span>
+                                <span class="speed-value">12 ms</span>
+                            </div>
+                            <div class="speed-item">
+                                <span class="speed-label">Packet Loss</span>
+                                <span class="speed-value">0.2%</span>
+                            </div>
+                        </div>
+                        <div class="speed-chart">
+                            <canvas id="speedChart" height="80"></canvas>
+                        </div>
+                        <div class="speed-info">
+                            <span>ISP: Example ISP</span>
+                            <span>Country: Iraq</span>
+                            <span>Server: Baghdad</span>
+                        </div>
+                    </div>
+                    <div class="project-links" dir="ltr">
+                        <a href="https://github.com/wsl-iq/ISTP" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://github.com/wsl-iq/ISTP" class="project-link view-project">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process -->
+    <section class="work-process">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">كيف أعمل؟</h2>
+                <p class="section-subtitle">منهجية العمل خطوة بخطوة</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number" dir="ltr">01</div>
+                    <div class="step-content">
+                        <h3>وصف المشروع</h3>
+                        <p>وصف المشروع بدقة مع التفاصيل المهمة قبل التطوير.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number" dir="ltr">02</div>
+                    <div class="step-content">
+                        <h3>فهم المشكلة</h3>
+                        <p>أفهم المشكلة والهدف قبل كتابة أول سطر كود.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number" dir="ltr">03</div>
+                    <div class="step-content">
+                        <h3>تخطيط التجربة</h3>
+                        <p>أرتب تجربة الاستخدام والواجهة والمنطق.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number" dir="ltr">04</div>
+                    <div class="step-content">
+                        <h3>التطوير</h3>
+                        <p>أحوّل التصميم إلى برنامج فعلي قابل للاستخدام.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number" dir="ltr">05</div>
+                    <div class="step-content">
+                        <h3>الاختبار</h3>
+                        <p>اختبار وتحسين وإصلاح التفاصيل.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number" dir="ltr">06</div>
+                    <div class="step-content">
+                        <h3>التسليم</h3>
+                        <p>تسليم نظيف وقابل للتطوير.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance Offer -->
+    <section class="offer">
+        <div class="section-container">
+            <div class="offer-content">
+                <h2 class="offer-title">لديك مشروع؟ خلينا نبنيه.</h2>
+                <div class="offer-discount">35% خصم فوري على طلبك الأول</div>
+                
+                <ul class="offer-benefits">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>إمكانية متابعة مشروعك بعد التسليم</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>إطلاق إصدارات وتحديثات مستقبلية</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>تصحيح الأخطاء مجانًا وفق شروط المشروع</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>فهم المشكلة والهدف قبل التطوير</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>ترتيب تجربة الاستخدام والواجهة والمنطق</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>اختبار وتحسين المشروع</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>تسليم نظيف وقابل للتطوير</span>
+                    </li>
+                </ul>
+                
+                <a href="#contact" class="btn-primary offer-cta">ابدأ مشروعك الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">هل لديك فكرة أو مشروع؟</h2>
+                <p class="section-subtitle">أرسل التفاصيل وسأبدأ بفهم المشكلة قبل كتابة الكود</p>
+            </div>
+            
+            <div class="contact-content">
+                <!--<form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="projectName" dir="ltr">Project Name</label>
+                        <input type="text" id="projectName" name="projectName" required placeholder="اسم المشروع">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectType" dir="ltr">Project Type</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="">اختر نوع المشروع</option>
+                            <option value="web">تطوير مواقع</option>
+                            <option value="desktop">تطبيق سطح مكتب</option>
+                            <option value="mobile">تطبيق هاتف</option>
+                            <option value="tool">أداة مطور</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget" dir="ltr">Budget</label>
+                        <input type="text" id="budget" name="budget" placeholder="الميزانية المتوقعة">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description" dir="ltr">Description</label>
+                        <textarea id="description" name="description" rows="5" required placeholder="وصف المشروع بالتفصيل..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary submit-btn">إرسال طلب المشروع</button>
+                </form>-->
+                
+                <div class="contact-info">
+                    <h3>تواصل معي</h3>
+                    <p>يمكنك التواصل معي عبر المنصات التالية</p>
+                    
+                    <div class="social-links" dir="ltr">
+                        <a href="https://github.com/wsl-iq" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>محمد الباقر</h3>
+                    <p dir="ltr">Software Developer</p>
+                    <p class="footer-tags" dir="ltr">GUI · CLI · UX/UI</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">الرئيسية</a>
+                    <a href="#about">عني</a>
+                    <a href="#skills">المهارات</a>
+                    <a href="#projects">المشاريع</a>
+                    <a href="#contact">التواصل</a>
+                </div>
+                
+                <div class="footer-social" dir="ltr">
+                    <a href="https://github.com/wsl-iq" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p dir="ltr">Copyright © 2026, Inc. Mohammed Al-Baqer. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
