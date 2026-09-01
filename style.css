@@ -1,3 +1,247 @@
+/* Mobile Viewport Fix */
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* منع أي تجاوز أفقي */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* إصلاح مشكلة الانشطار في الموبايل */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative;
+    }
+    
+    /* منع التمرير الأفقي */
+    .hero-container,
+    .section-container,
+    .nav-container,
+    .footer-container,
+    .projects-grid,
+    .services-grid,
+    .dev-types-grid,
+    .interfaces-grid,
+    .process-grid,
+    .statistics-grid,
+    .about-content,
+    .contact-content,
+    .skills-dashboard {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow: hidden;
+    }
+    
+    /* إصلاح العناصر العريضة */
+    .dashboard-card,
+    .project-card,
+    .service-card,
+    .dev-type-card,
+    .interface-card,
+    .process-step,
+    .statistics-card,
+    .stat-card,
+    .timeline-content,
+    .contact-form,
+    .offer-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden;
+    }
+    
+    /* إصلاح الرسوم البيانية */
+    canvas {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+    
+    /* إصلاح الصور والعناصر المرئية */
+    img, svg, video {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    
+    /* إصلاح النصوص الطويلة */
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .section-title,
+    .timeline-year,
+    .project-header h3 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* إصلاح الأزرار */
+    .hero-buttons,
+    .project-links,
+    .nav-actions {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .project-link,
+    .nav-cta {
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+    
+    /* إصلاح Timeline */
+    .timeline {
+        padding-right: 25px;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    .timeline::before {
+        right: 10px;
+        left: auto;
+    }
+    
+    .timeline-item {
+        padding-right: 20px;
+        padding-left: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    .timeline-dot {
+        right: 5px;
+        left: auto;
+    }
+    
+    /* إصلاح النوافذ المنبثقة */
+    .mockup-window,
+    .mockup-browser,
+    .mockup-phone,
+    .gui-window,
+    .terminal,
+    .wireframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden;
+    }
+    
+    /* إصلاح شبكة الإحصائيات */
+    .speed-metrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    /* إصلاح عناصر Form */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* إصلاح إضافي للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .section-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    .hero-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    .nav-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    .footer-container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    /* منع الانشطار */
+    .hero,
+    .about,
+    .statistics,
+    .services,
+    .dev-types,
+    .interfaces,
+    .skills,
+    .journey,
+    .projects,
+    .work-process,
+    .offer,
+    .contact,
+    .footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* إصلاح النصوص الإنجليزية الطويلة */
+    [dir="ltr"] {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* إصلاح مشكلة RTL/LTR */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="ltr"] {
+    text-align: left;
+    direction: ltr;
+}
+
+/* منع تحديد النص أثناء التمرير */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* إصلاح مشكلة العرض في iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 :root {
     --bg-primary: #0a0a0f;
     --bg-secondary: #12121a;

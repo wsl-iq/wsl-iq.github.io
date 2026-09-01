@@ -425,3 +425,71 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// ==================== Mobile Viewport Fix ====================
+document.addEventListener('DOMContentLoaded', function() {
+    // إصلاح مشكلة الانشطار في الموبايل
+    function fixMobileViewport() {
+        if (window.innerWidth <= 768) {
+            // منع التمرير الأفقي
+            document.documentElement.style.overflowX = 'hidden';
+            document.body.style.overflowX = 'hidden';
+            
+            // إصلاح عرض العناصر
+            const allElements = document.querySelectorAll('*');
+            allElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.width > window.innerWidth) {
+                    element.style.maxWidth = '100%';
+                    element.style.width = '100%';
+                }
+            });
+            
+            // إصلاح Canvas
+            const canvases = document.querySelectorAll('canvas');
+            canvases.forEach(canvas => {
+                const parent = canvas.parentElement;
+                if (parent && parent.offsetWidth > 0) {
+                    canvas.style.width = parent.offsetWidth + 'px';
+                }
+            });
+        }
+    }
+    
+    // تنفيذ عند التحميل
+    fixMobileViewport();
+    
+    // تنفيذ عند تغيير الحجم
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(fixMobileViewport, 250);
+    });
+    
+    // تنفيذ عند تغيير الاتجاه
+    window.addEventListener('orientationchange', function() {
+        setTimeout(fixMobileViewport, 500);
+    });
+});
+
+// ==================== Prevent Horizontal Scroll ====================
+window.addEventListener('scroll', function() {
+    if (window.scrollX > 0) {
+        window.scrollTo(0, window.scrollY);
+    }
+});
+
+// ==================== Fix RTL Issues on Mobile ====================
+document.addEventListener('DOMContentLoaded', function() {
+    // التأكد من أن جميع العناصر داخل الحاوية الصحيحة
+    const containers = document.querySelectorAll('.section-container, .hero-container, .nav-container, .footer-container');
+    
+    containers.forEach(container => {
+        if (window.innerWidth <= 768) {
+            container.style.width = '100%';
+            container.style.maxWidth = '100%';
+            container.style.marginLeft = '0';
+            container.style.marginRight = '0';
+        }
+    });
+});
