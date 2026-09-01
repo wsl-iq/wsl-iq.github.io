@@ -426,16 +426,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ==================== Mobile Viewport Fix ====================
+// Mobile Viewport Fix
 document.addEventListener('DOMContentLoaded', function() {
-    // إصلاح مشكلة الانشطار في الموبايل
+    // Fixing the splitting problem in mobile phones
     function fixMobileViewport() {
         if (window.innerWidth <= 768) {
-            // منع التمرير الأفقي
+            // Prevent horizontal scrolling
             document.documentElement.style.overflowX = 'hidden';
             document.body.style.overflowX = 'hidden';
             
-            // إصلاح عرض العناصر
+            // Fix item display
             const allElements = document.querySelectorAll('*');
             allElements.forEach(element => {
                 const rect = element.getBoundingClientRect();
@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // إصلاح Canvas
+            // Fix  Canvas
             const canvases = document.querySelectorAll('canvas');
             canvases.forEach(canvas => {
                 const parent = canvas.parentElement;
@@ -456,32 +456,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // تنفيذ عند التحميل
+    // Execute upon loading
     fixMobileViewport();
     
-    // تنفيذ عند تغيير الحجم
+    // Perform when changing size
     let resizeTimer;
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(fixMobileViewport, 250);
     });
     
-    // تنفيذ عند تغيير الاتجاه
+    // Implementation when changing direction
     window.addEventListener('orientationchange', function() {
         setTimeout(fixMobileViewport, 500);
     });
 });
 
-// ==================== Prevent Horizontal Scroll ====================
+// Prevent Horizontal Scroll
 window.addEventListener('scroll', function() {
     if (window.scrollX > 0) {
         window.scrollTo(0, window.scrollY);
     }
 });
 
-// ==================== Fix RTL Issues on Mobile ====================
+// Fix RTL Issues on Mobile
 document.addEventListener('DOMContentLoaded', function() {
-    // التأكد من أن جميع العناصر داخل الحاوية الصحيحة
+    // Make sure all items are inside the correct container.
     const containers = document.querySelectorAll('.section-container, .hero-container, .nav-container, .footer-container');
     
     containers.forEach(container => {

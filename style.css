@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* منع أي تجاوز أفقي */
+/* Prevent any horizontal overhang */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
     max-width: 100%;
 }
 
-/* إصلاح مشكلة الانشطار في الموبايل */
+/* Fixing the splitting problem in mobile phones */
 @media (max-width: 768px) {
     html, body {
         overflow-x: hidden !important;
@@ -32,7 +32,7 @@ body {
         position: relative;
     }
     
-    /* منع التمرير الأفقي */
+    /* Prevent horizontal scrolling */
     .hero-container,
     .section-container,
     .nav-container,
@@ -55,7 +55,7 @@ body {
         overflow: hidden;
     }
     
-    /* إصلاح العناصر العريضة */
+    /* Fixing wide elements */
     .dashboard-card,
     .project-card,
     .service-card,
@@ -72,20 +72,20 @@ body {
         overflow: hidden;
     }
     
-    /* إصلاح الرسوم البيانية */
+    /* Fixing the charts */
     canvas {
         max-width: 100% !important;
         height: auto !important;
         display: block;
     }
     
-    /* إصلاح الصور والعناصر المرئية */
+    /* Image and visual element repair */
     img, svg, video {
         max-width: 100% !important;
         height: auto !important;
     }
     
-    /* إصلاح النصوص الطويلة */
+    /* Fixing long texts */
     .hero-badge,
     .hero-title,
     .hero-subtitle,
@@ -97,7 +97,7 @@ body {
         hyphens: auto;
     }
     
-    /* إصلاح الأزرار */
+    /* button repair */
     .hero-buttons,
     .project-links,
     .nav-actions {
@@ -114,7 +114,7 @@ body {
         max-width: 100%;
     }
     
-    /* إصلاح Timeline */
+    /* Fixing Bugs Timeline */
     .timeline {
         padding-right: 25px;
         padding-left: 0;
@@ -139,7 +139,7 @@ body {
         left: auto;
     }
     
-    /* إصلاح النوافذ المنبثقة */
+    /* Fix pop-up windows */
     .mockup-window,
     .mockup-browser,
     .mockup-phone,
@@ -151,13 +151,13 @@ body {
         overflow: hidden;
     }
     
-    /* إصلاح شبكة الإحصائيات */
+    /* Fixing the statistics network */
     .speed-metrics {
         grid-template-columns: 1fr 1fr;
         gap: 8px;
     }
     
-    /* إصلاح عناصر Form */
+    /* Fix Form elements  */
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -166,7 +166,7 @@ body {
     }
 }
 
-/* إصلاح إضافي للشاشات الصغيرة جداً */
+/* Additional fix for very small screens */
 @media (max-width: 480px) {
     .section-container {
         padding-left: 12px !important;
@@ -188,7 +188,7 @@ body {
         padding-right: 12px !important;
     }
     
-    /* منع الانشطار */
+    /* Preventing fission */
     .hero,
     .about,
     .statistics,
@@ -207,14 +207,14 @@ body {
         overflow-x: hidden !important;
     }
     
-    /* إصلاح النصوص الإنجليزية الطويلة */
+    /* Correcting long English texts */
     [dir="ltr"] {
         word-break: break-word;
         overflow-wrap: break-word;
     }
 }
 
-/* إصلاح مشكلة RTL/LTR */
+/** Fixing Bugs RTL/LTR
 [dir="rtl"] {
     text-align: right;
 }
@@ -223,8 +223,9 @@ body {
     text-align: left;
     direction: ltr;
 }
+*/
 
-/* منع تحديد النص أثناء التمرير */
+/* Prevent text selection while scrolling */
 body {
     -webkit-user-select: none;
     -moz-user-select: none;
